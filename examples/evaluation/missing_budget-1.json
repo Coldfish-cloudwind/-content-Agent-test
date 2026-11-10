@@ -1,0 +1,50 @@
+{
+  "case": "missing_budget",
+  "repeat": 1,
+  "model_mode": "mock",
+  "model": "deterministic-mock",
+  "elapsed_seconds": 0.4692,
+  "exit_code": 2,
+  "expected": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "invalid_input"
+  },
+  "expectation_matched": true,
+  "assessment": {
+    "checks": {
+      "ledger_total": true,
+      "nonnegative_charges": true,
+      "budget_respected": true,
+      "trace_sequence": true,
+      "completion_has_saved_plan": true,
+      "incomplete_has_reason": true
+    },
+    "all_checks_passed": true
+  },
+  "result": {
+    "campaign_id": "missing_budget",
+    "status": "incomplete",
+    "reason": {
+      "code": "invalid_input",
+      "message": "budget 必须为非负整数模拟单位"
+    },
+    "invocation": "input_validation",
+    "new_steps": 0,
+    "revision": 0,
+    "timeline": "2030-05-01T01:00:00+00:00",
+    "steps": {
+      "search_assets": "pending",
+      "estimate_cost": "pending",
+      "generate_script": "pending",
+      "save_plan": "pending"
+    },
+    "assets": [],
+    "quotes": {},
+    "script": null,
+    "charges": [],
+    "total_cost": 0,
+    "saved_plan": null,
+    "trace": []
+  }
+}

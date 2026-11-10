@@ -1,0 +1,15 @@
+{
+  "mode": "mock",
+  "model": "deterministic-mock",
+  "repeats": 3,
+  "cases": 42,
+  "expectation_matches": 42,
+  "expectation_match_rate": 1.0,
+  "structural_checks_passed": 42,
+  "completion_count": 24,
+  "completion_rate": 0.5714285714285714,
+  "mean_elapsed_seconds": 0.4625761904761905,
+  "human_review_status": "pending",
+  "api_token_usage": "not_collected",
+  "note": "完成率包含预期未完成的负例；预期匹配率评估验收行为。mock 重复运行只验证流程稳定性。"
+}

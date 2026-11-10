@@ -1,0 +1,328 @@
+{
+  "case": "replan",
+  "repeat": 2,
+  "model_mode": "mock",
+  "model": "deterministic-mock",
+  "elapsed_seconds": 0.4677,
+  "exit_code": 0,
+  "expected": {
+    "status": "completed",
+    "cost": 8,
+    "variant": "lite",
+    "observations": [
+      {
+        "code": "quote",
+        "variant": "studio",
+        "budget_gap": 2
+      }
+    ]
+  },
+  "expectation_matched": true,
+  "assessment": {
+    "checks": {
+      "ledger_total": true,
+      "nonnegative_charges": true,
+      "budget_respected": true,
+      "trace_sequence": true,
+      "completion_has_saved_plan": true,
+      "incomplete_has_reason": true,
+      "saved_total_matches": true,
+      "assets_grounded": true,
+      "script_fields_present": true,
+      "saved_event_present": true,
+      "schedule_matches_ledger": true,
+      "deadline_respected": true
+    },
+    "all_checks_passed": true
+  },
+  "result": {
+    "campaign_id": "replan",
+    "status": "completed",
+    "reason": null,
+    "invocation": "executed",
+    "new_steps": 5,
+    "revision": 5,
+    "timeline": "2030-05-01T01:00:00+00:00",
+    "steps": {
+      "search_assets": "succeeded",
+      "estimate_cost": "succeeded",
+      "generate_script": "succeeded",
+      "save_plan": "succeeded"
+    },
+    "assets": [
+      {
+        "id": "C01",
+        "title": "校园跑道起跑的晨光",
+        "kind": "clip",
+        "tags": [
+          "校园",
+          "迎新",
+          "社团",
+          "跑步"
+        ],
+        "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+      },
+      {
+        "id": "C02",
+        "title": "社团摊位路线手绘卡",
+        "kind": "image",
+        "tags": [
+          "校园",
+          "迎新",
+          "社团"
+        ],
+        "detail": "卡片用图标标出集合点、体验区与签到处。"
+      }
+    ],
+    "quotes": {
+      "studio": {
+        "variant": "studio",
+        "total": 12,
+        "remaining_units": 11,
+        "finish": "2030-05-01T01:38:00+00:00",
+        "budget_gap": 2,
+        "late_minutes": 0,
+        "feasible": false
+      },
+      "lite": {
+        "variant": "lite",
+        "total": 8,
+        "remaining_units": 7,
+        "finish": "2030-05-01T01:15:00+00:00",
+        "budget_gap": 0,
+        "late_minutes": 0,
+        "feasible": true
+      }
+    },
+    "script": {
+      "title": "校园迎新社团体验日｜一起参与",
+      "variant": "lite",
+      "channel": "社交图文",
+      "objective": "引导潜在参与者收藏活动信息、留言并邀请同伴。",
+      "beats": [
+        {
+          "position": "首图（视频素材取首帧）",
+          "asset": "C02",
+          "visual": "卡片用图标标出集合点、体验区与签到处。",
+          "copy": "校园迎新社团体验日｜一起参与"
+        },
+        {
+          "position": "正文",
+          "asset": "C02",
+          "visual": "裁切主视觉并叠加互动提示",
+          "copy": "看到「社团摊位路线手绘卡」，你想先体验什么？收藏活动卡，留言约个搭子。"
+        }
+      ]
+    },
+    "charges": [
+      {
+        "tool": "search_assets",
+        "units": 1,
+        "minutes": 3,
+        "start": "2030-05-01T01:00:00+00:00",
+        "finish": "2030-05-01T01:03:00+00:00"
+      },
+      {
+        "tool": "generate_script",
+        "units": 5,
+        "minutes": 9,
+        "start": "2030-05-01T01:03:00+00:00",
+        "finish": "2030-05-01T01:12:00+00:00"
+      },
+      {
+        "tool": "save_plan",
+        "units": 2,
+        "minutes": 3,
+        "start": "2030-05-01T01:12:00+00:00",
+        "finish": "2030-05-01T01:15:00+00:00"
+      }
+    ],
+    "total_cost": 8,
+    "saved_plan": {
+      "campaign_id": "replan",
+      "topic": "校园迎新社团体验日",
+      "deadline": "2030-05-01T10:00:00+08:00",
+      "budget": 10,
+      "total_cost": 8,
+      "script": {
+        "title": "校园迎新社团体验日｜一起参与",
+        "variant": "lite",
+        "channel": "社交图文",
+        "objective": "引导潜在参与者收藏活动信息、留言并邀请同伴。",
+        "beats": [
+          {
+            "position": "首图（视频素材取首帧）",
+            "asset": "C02",
+            "visual": "卡片用图标标出集合点、体验区与签到处。",
+            "copy": "校园迎新社团体验日｜一起参与"
+          },
+          {
+            "position": "正文",
+            "asset": "C02",
+            "visual": "裁切主视觉并叠加互动提示",
+            "copy": "看到「社团摊位路线手绘卡」，你想先体验什么？收藏活动卡，留言约个搭子。"
+          }
+        ]
+      },
+      "production_schedule": [
+        {
+          "tool": "search_assets",
+          "units": 1,
+          "minutes": 3,
+          "start": "2030-05-01T01:00:00+00:00",
+          "finish": "2030-05-01T01:03:00+00:00",
+          "owner": "素材运营"
+        },
+        {
+          "tool": "generate_script",
+          "units": 5,
+          "minutes": 9,
+          "start": "2030-05-01T01:03:00+00:00",
+          "finish": "2030-05-01T01:12:00+00:00",
+          "owner": "内容编辑"
+        },
+        {
+          "tool": "save_plan",
+          "units": 2,
+          "minutes": 3,
+          "start": "2030-05-01T01:12:00+00:00",
+          "finish": "2030-05-01T01:15:00+00:00",
+          "owner": "活动运营"
+        }
+      ],
+      "handoff": [
+        "按分镜排版或剪辑",
+        "发布前核对活动信息与字幕",
+        "发布后记录收藏和评论数量"
+      ]
+    },
+    "trace": [
+      {
+        "step": 1,
+        "session": 1,
+        "model": "mock",
+        "action": "search_assets",
+        "args": {},
+        "reason": "按主题查询合成素材。",
+        "observation": {
+          "ok": true,
+          "code": "assets_found",
+          "assets": [
+            {
+              "id": "C01",
+              "title": "校园跑道起跑的晨光",
+              "kind": "clip",
+              "tags": [
+                "校园",
+                "迎新",
+                "社团",
+                "跑步"
+              ],
+              "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+            },
+            {
+              "id": "C02",
+              "title": "社团摊位路线手绘卡",
+              "kind": "image",
+              "tags": [
+                "校园",
+                "迎新",
+                "社团"
+              ],
+              "detail": "卡片用图标标出集合点、体验区与签到处。"
+            }
+          ],
+          "available_variants": [
+            "studio",
+            "lite"
+          ]
+        },
+        "spent_after": 1,
+        "next_action": "estimate_cost"
+      },
+      {
+        "step": 2,
+        "session": 1,
+        "model": "mock",
+        "action": "estimate_cost",
+        "args": {
+          "variant": "studio"
+        },
+        "reason": "素材支持 studio，需要确认费用和交付时间。",
+        "observation": {
+          "ok": true,
+          "code": "quote",
+          "variant": "studio",
+          "total": 12,
+          "remaining_units": 11,
+          "finish": "2030-05-01T01:38:00+00:00",
+          "budget_gap": 2,
+          "late_minutes": 0,
+          "feasible": false
+        },
+        "spent_after": 1,
+        "next_action": "estimate_cost"
+      },
+      {
+        "step": 3,
+        "session": 1,
+        "model": "mock",
+        "action": "estimate_cost",
+        "args": {
+          "variant": "lite"
+        },
+        "reason": "素材支持 lite，需要确认费用和交付时间。",
+        "observation": {
+          "ok": true,
+          "code": "quote",
+          "variant": "lite",
+          "total": 8,
+          "remaining_units": 7,
+          "finish": "2030-05-01T01:15:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true
+        },
+        "spent_after": 1,
+        "next_action": "generate_script"
+      },
+      {
+        "step": 4,
+        "session": 1,
+        "model": "mock",
+        "action": "generate_script",
+        "args": {
+          "variant": "lite"
+        },
+        "reason": "lite 报价 8，时间与预算均满足。",
+        "observation": {
+          "ok": true,
+          "code": "script_ready",
+          "variant": "lite",
+          "title": "校园迎新社团体验日｜一起参与",
+          "segments": 2
+        },
+        "spent_after": 6,
+        "next_action": "save_plan"
+      },
+      {
+        "step": 5,
+        "session": 1,
+        "model": "mock",
+        "action": "save_plan",
+        "args": {},
+        "reason": "已有脚本，复用该版本完成保存。",
+        "observation": {
+          "ok": true,
+          "code": "saved",
+          "variant": "lite",
+          "total_cost": 8,
+          "id": "replan",
+          "finish": "2030-05-01T01:15:00+00:00"
+        },
+        "spent_after": 8,
+        "next_action": "completed"
+      }
+    ]
+  }
+}

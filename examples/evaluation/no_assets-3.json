@@ -1,0 +1,86 @@
+{
+  "case": "no_assets",
+  "repeat": 3,
+  "model_mode": "mock",
+  "model": "deterministic-mock",
+  "elapsed_seconds": 0.4747,
+  "exit_code": 2,
+  "expected": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "model_stopped",
+    "observations": [
+      {
+        "code": "no_assets"
+      }
+    ]
+  },
+  "expectation_matched": true,
+  "assessment": {
+    "checks": {
+      "ledger_total": true,
+      "nonnegative_charges": true,
+      "budget_respected": true,
+      "trace_sequence": true,
+      "completion_has_saved_plan": true,
+      "incomplete_has_reason": true
+    },
+    "all_checks_passed": true
+  },
+  "result": {
+    "campaign_id": "no_assets",
+    "status": "incomplete",
+    "reason": {
+      "code": "model_stopped",
+      "message": "素材检索无法继续：{'ok': False, 'code': 'no_assets', 'topic': '深海珊瑚展', 'message': '合成库无匹配素材，可补充素材或调整主题。'}"
+    },
+    "invocation": "executed",
+    "new_steps": 2,
+    "revision": 2,
+    "timeline": "2030-05-01T01:00:00+00:00",
+    "steps": {
+      "search_assets": "failed",
+      "estimate_cost": "pending",
+      "generate_script": "pending",
+      "save_plan": "pending"
+    },
+    "assets": [],
+    "quotes": {},
+    "script": null,
+    "charges": [],
+    "total_cost": 0,
+    "saved_plan": null,
+    "trace": [
+      {
+        "step": 1,
+        "session": 1,
+        "model": "mock",
+        "action": "search_assets",
+        "args": {},
+        "reason": "按主题查询合成素材。",
+        "observation": {
+          "ok": false,
+          "code": "no_assets",
+          "topic": "深海珊瑚展",
+          "message": "合成库无匹配素材，可补充素材或调整主题。"
+        },
+        "spent_after": 0,
+        "next_action": "stop"
+      },
+      {
+        "step": 2,
+        "session": 1,
+        "model": "mock",
+        "action": "stop",
+        "args": {},
+        "reason": "素材检索无法继续：{'ok': False, 'code': 'no_assets', 'topic': '深海珊瑚展', 'message': '合成库无匹配素材，可补充素材或调整主题。'}",
+        "observation": {
+          "ok": true,
+          "code": "stopped"
+        },
+        "spent_after": 0,
+        "next_action": "incomplete"
+      }
+    ]
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "case": "no_assets",
+  "repeat": 1,
+  "model_mode": "mock",
+  "model": "deterministic-mock",
+  "elapsed_seconds": 0.4859,
+  "exit_code": 2,
+  "expected": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "model_stopped",
+    "observations": [
+      {
+        "code": "no_assets"
+      }
+    ]
+  },
+  "expectation_matched": true,
+  "assessment": {
+    "checks": {
+      "ledger_total": true,
+      "nonnegative_charges": true,
+      "budget_respected": true,
+      "trace_sequence": true,
+      "completion_has_saved_plan": true,
+      "incomplete_has_reason": true,
+      "plan_is_dag": true,
+      "attempt_costs_match_ledger": true,
+      "failed_attempts_not_charged": true,
+      "attempt_ids_unique": true,
+      "step_result_references_valid": true
+    },
+    "all_checks_passed": true
+  },
+  "result": {
+    "campaign_id": "no_assets",
+    "status": "incomplete",
+    "reason": {
+      "code": "model_stopped",
+      "message": "素材检索无法继续：{'ok': False, 'code': 'no_assets', 'topic': '深海珊瑚展', 'message': '合成库无匹配素材，可补充素材或调整主题。', 'step_id': 'p1.search_assets', 'status': 'failed', 'cost': 0, 'duration': 0, 'estimated_cost': 1, 'estimated_duration': 3, 'output': {'topic': '深海珊瑚展'}, 'error': {'code': 'no_assets', 'message': '合成库无匹配素材，可补充素材或调整主题。'}, 'reused': False, 'idempotency_key': 'ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4', 'attempt_id': 'no_assets.attempt-1'}"
+    },
+    "invocation": "executed",
+    "new_steps": 2,
+    "revision": 2,
+    "timeline": "2030-05-01T01:00:00+00:00",
+    "steps": {
+      "search_assets": "failed",
+      "estimate_cost": "pending",
+      "generate_script": "pending",
+      "save_plan": "pending"
+    },
+    "assets": [],
+    "asset_failures": [],
+    "quotes": {},
+    "script": null,
+    "charges": [],
+    "total_cost": 0,
+    "saved_plan": null,
+    "trace": [
+      {
+        "step": 1,
+        "session": 1,
+        "run_id": "334468681ad742c9a0c6f1f1c7ee3a03",
+        "model": "mock",
+        "action": "search_assets",
+        "args": {},
+        "reason": "按主题查询合成素材。",
+        "observation": {
+          "ok": false,
+          "code": "no_assets",
+          "topic": "深海珊瑚展",
+          "message": "合成库无匹配素材，可补充素材或调整主题。",
+          "step_id": "p1.search_assets",
+          "status": "failed",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {
+            "topic": "深海珊瑚展"
+          },
+          "error": {
+            "code": "no_assets",
+            "message": "合成库无匹配素材，可补充素材或调整主题。"
+          },
+          "reused": false,
+          "idempotency_key": "ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4",
+          "attempt_id": "no_assets.attempt-1"
+        },
+        "spent_after": 0,
+        "next_action": "stop"
+      },
+      {
+        "step": 2,
+        "session": 1,
+        "run_id": "334468681ad742c9a0c6f1f1c7ee3a03",
+        "model": "mock",
+        "action": "stop",
+        "args": {},
+        "reason": "素材检索无法继续：{'ok': False, 'code': 'no_assets', 'topic': '深海珊瑚展', 'message': '合成库无匹配素材，可补充素材或调整主题。', 'step_id': 'p1.search_assets', 'status': 'failed', 'cost': 0, 'duration': 0, 'estimated_cost': 1, 'estimated_duration': 3, 'output': {'topic': '深海珊瑚展'}, 'error': {'code': 'no_assets', 'message': '合成库无匹配素材，可补充素材或调整主题。'}, 'reused': False, 'idempotency_key': 'ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4', 'attempt_id': 'no_assets.attempt-1'}",
+        "observation": {
+          "ok": true,
+          "code": "stopped"
+        },
+        "spent_after": 0,
+        "next_action": "incomplete"
+      }
+    ],
+    "task_id": "no_assets",
+    "run_id": "334468681ad742c9a0c6f1f1c7ee3a03",
+    "task_plan": {
+      "version": 1,
+      "kind": "initial",
+      "variant": null,
+      "status": "incomplete",
+      "created_after_step": 0,
+      "trigger": {
+        "code": "task_received"
+      },
+      "steps": [
+        {
+          "step_id": "p1.search_assets",
+          "tool": "search_assets",
+          "inputs": {
+            "topic": "深海珊瑚展"
+          },
+          "depends_on": [],
+          "input_refs": [],
+          "expected_output": "search_assets_result",
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4",
+          "attempt_refs": [
+            "no_assets.attempt-1"
+          ],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": {
+            "ok": false,
+            "code": "no_assets",
+            "topic": "深海珊瑚展",
+            "message": "合成库无匹配素材，可补充素材或调整主题。",
+            "step_id": "p1.search_assets",
+            "status": "failed",
+            "cost": 0,
+            "duration": 0,
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "output": {
+              "topic": "深海珊瑚展"
+            },
+            "error": {
+              "code": "no_assets",
+              "message": "合成库无匹配素材，可补充素材或调整主题。"
+            },
+            "reused": false,
+            "idempotency_key": "ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4",
+            "attempt_id": "no_assets.attempt-1"
+          },
+          "status": "failed",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        },
+        {
+          "step_id": "p1.estimate_cost",
+          "tool": "estimate_cost",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets"
+          ],
+          "input_refs": [
+            "p1.search_assets.output"
+          ],
+          "expected_output": "estimate_cost_result",
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "critical": true,
+          "idempotency_key": "a11ba175835814dab4dcc3e25bdcfea827fe40181e276f6db40649d075db27bb",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.search_assets"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.generate_script",
+          "tool": "generate_script",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets",
+            "p1.estimate_cost"
+          ],
+          "input_refs": [
+            "p1.search_assets.output",
+            "p1.estimate_cost.output"
+          ],
+          "expected_output": "generate_script_result",
+          "estimated_cost": null,
+          "estimated_duration": null,
+          "critical": true,
+          "idempotency_key": "83ceab68897e654add0a71437fd616998946ffaf87fe4a42df8d113dffa636c8",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.search_assets",
+            "p1.estimate_cost"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.save_plan",
+          "tool": "save_plan",
+          "inputs": {},
+          "depends_on": [
+            "p1.estimate_cost",
+            "p1.generate_script"
+          ],
+          "input_refs": [
+            "p1.estimate_cost.output",
+            "p1.generate_script.output"
+          ],
+          "expected_output": "save_plan_result",
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "6bc57051c202668d0bae5a80517845ce98e8022afb648b757cbdab6d5c2b9c31",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.estimate_cost",
+            "p1.generate_script"
+          ],
+          "reused": false
+        }
+      ],
+      "actual_cost": 0,
+      "estimated_total_cost": null,
+      "estimated_finish": null
+    },
+    "plan_versions": [
+      {
+        "version": 1,
+        "kind": "initial",
+        "variant": null,
+        "status": "incomplete",
+        "created_after_step": 0,
+        "trigger": {
+          "code": "task_received"
+        },
+        "steps": [
+          {
+            "step_id": "p1.search_assets",
+            "tool": "search_assets",
+            "inputs": {
+              "topic": "深海珊瑚展"
+            },
+            "depends_on": [],
+            "input_refs": [],
+            "expected_output": "search_assets_result",
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4",
+            "attempt_refs": [
+              "no_assets.attempt-1"
+            ],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": {
+              "ok": false,
+              "code": "no_assets",
+              "topic": "深海珊瑚展",
+              "message": "合成库无匹配素材，可补充素材或调整主题。",
+              "step_id": "p1.search_assets",
+              "status": "failed",
+              "cost": 0,
+              "duration": 0,
+              "estimated_cost": 1,
+              "estimated_duration": 3,
+              "output": {
+                "topic": "深海珊瑚展"
+              },
+              "error": {
+                "code": "no_assets",
+                "message": "合成库无匹配素材，可补充素材或调整主题。"
+              },
+              "reused": false,
+              "idempotency_key": "ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4",
+              "attempt_id": "no_assets.attempt-1"
+            },
+            "status": "failed",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          },
+          {
+            "step_id": "p1.estimate_cost",
+            "tool": "estimate_cost",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets"
+            ],
+            "input_refs": [
+              "p1.search_assets.output"
+            ],
+            "expected_output": "estimate_cost_result",
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "critical": true,
+            "idempotency_key": "a11ba175835814dab4dcc3e25bdcfea827fe40181e276f6db40649d075db27bb",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.search_assets"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.generate_script",
+            "tool": "generate_script",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets",
+              "p1.estimate_cost"
+            ],
+            "input_refs": [
+              "p1.search_assets.output",
+              "p1.estimate_cost.output"
+            ],
+            "expected_output": "generate_script_result",
+            "estimated_cost": null,
+            "estimated_duration": null,
+            "critical": true,
+            "idempotency_key": "83ceab68897e654add0a71437fd616998946ffaf87fe4a42df8d113dffa636c8",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.search_assets",
+              "p1.estimate_cost"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.save_plan",
+            "tool": "save_plan",
+            "inputs": {},
+            "depends_on": [
+              "p1.estimate_cost",
+              "p1.generate_script"
+            ],
+            "input_refs": [
+              "p1.estimate_cost.output",
+              "p1.generate_script.output"
+            ],
+            "expected_output": "save_plan_result",
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "6bc57051c202668d0bae5a80517845ce98e8022afb648b757cbdab6d5c2b9c31",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.estimate_cost",
+              "p1.generate_script"
+            ],
+            "reused": false
+          }
+        ],
+        "actual_cost": 0,
+        "estimated_total_cost": null,
+        "estimated_finish": null
+      }
+    ],
+    "replanning": [],
+    "attempts": [
+      {
+        "attempt_id": "no_assets.attempt-1",
+        "plan_version": 1,
+        "step_id": "p1.search_assets",
+        "run_id": "334468681ad742c9a0c6f1f1c7ee3a03",
+        "session": 1,
+        "action": "search_assets",
+        "args": {},
+        "transitions": [
+          "pending",
+          "running",
+          "failed"
+        ],
+        "idempotency_key": "ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4",
+        "result": {
+          "ok": false,
+          "code": "no_assets",
+          "topic": "深海珊瑚展",
+          "message": "合成库无匹配素材，可补充素材或调整主题。",
+          "step_id": "p1.search_assets",
+          "status": "failed",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {
+            "topic": "深海珊瑚展"
+          },
+          "error": {
+            "code": "no_assets",
+            "message": "合成库无匹配素材，可补充素材或调整主题。"
+          },
+          "reused": false,
+          "idempotency_key": "ebaf0bef199346fc78cd273ccebf0d5bf565b33aaebdcba3ae6dd58160ead9f4",
+          "attempt_id": "no_assets.attempt-1"
+        }
+      }
+    ],
+    "snapshots": [
+      {
+        "after_step": 1,
+        "session": 1,
+        "plan_version": 1,
+        "status": "running",
+        "spent": 0,
+        "asset_ids": [],
+        "has_script": false,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "failed",
+          "estimate_cost": "blocked",
+          "generate_script": "blocked",
+          "save_plan": "blocked"
+        }
+      },
+      {
+        "after_step": 2,
+        "session": 1,
+        "plan_version": 1,
+        "status": "incomplete",
+        "spent": 0,
+        "asset_ids": [],
+        "has_script": false,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "failed",
+          "estimate_cost": "blocked",
+          "generate_script": "blocked",
+          "save_plan": "blocked"
+        }
+      }
+    ],
+    "unfinished": {
+      "stopped_at": "search_assets",
+      "budget_gap": 0,
+      "late_minutes": 0,
+      "missing_fields": [],
+      "missing_assets": [
+        "matching_asset"
+      ],
+      "retained_steps": [],
+      "next_steps": [
+        "补充匹配素材，或对 failed_asset_ids 使用按 ID 重试。"
+      ]
+    }
+  }
+}
