@@ -1,0 +1,302 @@
+[
+  {
+    "case_id": "normal-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "repeat-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "replan-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "failure-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "short_time-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_assets-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "resumed-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "retry_completed-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_retry-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_resumed-1",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "normal-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "repeat-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "replan-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "failure-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "short_time-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_assets-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "resumed-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "retry_completed-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_retry-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_resumed-2",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "normal-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "repeat-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "replan-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "failure-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "short_time-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_assets-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "resumed-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "retry_completed-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_retry-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  },
+  {
+    "case_id": "partial_resumed-3",
+    "reviewer": null,
+    "scores": {
+      "topic_relevance": null,
+      "asset_fidelity": null,
+      "actionability": null
+    },
+    "notes": null
+  }
+]

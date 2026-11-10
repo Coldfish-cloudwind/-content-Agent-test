@@ -1,0 +1,94 @@
+{
+  "version": "2026-11-10",
+  "common": {
+    "search_assets": {
+      "units": 1,
+      "minutes": 3
+    },
+    "estimate_cost": {
+      "units": 0,
+      "minutes": 0
+    },
+    "save_plan": {
+      "units": 2,
+      "minutes": 3
+    }
+  },
+  "variants": {
+    "studio": {
+      "label": "双素材短片",
+      "requires": [
+        "clip",
+        "image"
+      ],
+      "units": 9,
+      "minutes": 32,
+      "channel": "竖屏短视频"
+    },
+    "lite": {
+      "label": "单素材图文卡",
+      "requires": [
+        "any"
+      ],
+      "units": 5,
+      "minutes": 9,
+      "channel": "社交图文"
+    }
+  },
+  "assets": [
+    {
+      "id": "C01",
+      "title": "校园跑道起跑的晨光",
+      "kind": "clip",
+      "tags": [
+        "校园",
+        "迎新",
+        "社团",
+        "跑步"
+      ],
+      "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+    },
+    {
+      "id": "C02",
+      "title": "社团摊位路线手绘卡",
+      "kind": "image",
+      "tags": [
+        "校园",
+        "迎新",
+        "社团"
+      ],
+      "detail": "卡片用图标标出集合点、体验区与签到处。"
+    },
+    {
+      "id": "K01",
+      "title": "咖啡拉花近景",
+      "kind": "clip",
+      "tags": [
+        "咖啡",
+        "市集"
+      ],
+      "detail": "牛奶在杯中形成叶形，镜头由全景推进到杯沿。"
+    },
+    {
+      "id": "K02",
+      "title": "市集咖啡摊位卡",
+      "kind": "image",
+      "tags": [
+        "咖啡",
+        "市集"
+      ],
+      "detail": "画面留白用于体验时段和现场报名说明。"
+    },
+    {
+      "id": "B01",
+      "title": "旧书交换书签",
+      "kind": "image",
+      "tags": [
+        "旧书",
+        "换书",
+        "读书"
+      ],
+      "detail": "书签留有推荐语和交换留言区。"
+    }
+  ]
+}

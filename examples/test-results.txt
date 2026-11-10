@@ -1,0 +1,62 @@
+test_api_failure_never_falls_back (test_agent.AgentTests.test_api_failure_never_falls_back) ... ok
+test_api_protocol_and_secret_not_traced (test_agent.AgentTests.test_api_protocol_and_secret_not_traced) ... ok
+test_bridge_revision_rejects_stale_action (test_agent.AgentTests.test_bridge_revision_rejects_stale_action) ... ok
+test_budget_replanning (test_agent.AgentTests.test_budget_replanning) ... ok
+test_catalog_content_change_rejects_checkpoint (test_agent.AgentTests.test_catalog_content_change_rejects_checkpoint) ... ok
+test_cli_entry_and_cached_exit (test_agent.AgentTests.test_cli_entry_and_cached_exit) ... ok
+test_concurrent_state_commit_rejects_duplicate_charge (test_agent.AgentTests.test_concurrent_state_commit_rejects_duplicate_charge) ... ok
+test_deadline_replanning (test_agent.AgentTests.test_deadline_replanning) ... ok
+test_dependency_and_budget_guards (test_agent.AgentTests.test_dependency_and_budget_guards) ... ok
+test_expired_request (test_agent.AgentTests.test_expired_request) ... ok
+test_id_reuse_conflict (test_agent.AgentTests.test_id_reuse_conflict) ... ok
+test_invalid_endpoint_retains_explicit_failure (test_agent.AgentTests.test_invalid_endpoint_retains_explicit_failure) ... ok
+test_invalid_model_response_returns_incomplete (test_agent.AgentTests.test_invalid_model_response_returns_incomplete) ... ok
+test_invalid_requests (test_agent.AgentTests.test_invalid_requests) ... ok
+test_legacy_checkpoint_can_resume (test_agent.AgentTests.test_legacy_checkpoint_can_resume) ... ok
+test_missing_fields_no_side_effects (test_agent.AgentTests.test_missing_fields_no_side_effects) ... ok
+test_no_assets (test_agent.AgentTests.test_no_assets) ... ok
+test_no_feasible_plan (test_agent.AgentTests.test_no_feasible_plan) ... ok
+test_normal_and_accounting (test_agent.AgentTests.test_normal_and_accounting) ... ok
+test_partial_assets (test_agent.AgentTests.test_partial_assets) ... ok
+test_repeat_no_duplicate_steps_or_charges (test_agent.AgentTests.test_repeat_no_duplicate_steps_or_charges) ... ok
+test_resume_retains_script_and_failed_event (test_agent.AgentTests.test_resume_retains_script_and_failed_event) ... ok
+test_resume_retries_only_variant_after_transient_failure (test_agent.AgentTests.test_resume_retries_only_variant_after_transient_failure) ... ok
+test_step_and_lifetime_bounds (test_agent.AgentTests.test_step_and_lifetime_bounds) ... ok
+test_tool_failure_switches_variant_keeps_assets (test_agent.AgentTests.test_tool_failure_switches_variant_keeps_assets) ... ok
+test_truncated_http_response_is_model_error (test_agent.AgentTests.test_truncated_http_response_is_model_error) ... ok
+test_wall_clock_rechecked_after_model (test_agent.AgentTests.test_wall_clock_rechecked_after_model) ... ok
+test_batch_cli_expectations_and_negative_case_denominator (test_evaluation.EvaluationTests.test_batch_cli_expectations_and_negative_case_denominator) ... ok
+test_corrupted_cost_assets_and_schedule_are_detected (test_evaluation.EvaluationTests.test_corrupted_cost_assets_and_schedule_are_detected) ... ok
+test_model_failure_cannot_pass_no_assets_expectation (test_evaluation.EvaluationTests.test_model_failure_cannot_pass_no_assets_expectation) ... ok
+test_pending_review_has_no_score (test_evaluation.EvaluationTests.test_pending_review_has_no_score) ... ok
+test_review_validation_and_explicit_zero (test_evaluation.EvaluationTests.test_review_validation_and_explicit_zero) ... ok
+test_valid_result_passes_structural_checks (test_evaluation.EvaluationTests.test_valid_result_passes_structural_checks) ... ok
+test_cli_bridge_budget_observe_act_loop (test_integration.CLIIntegrationTests.test_cli_bridge_budget_observe_act_loop) ... ok
+test_cli_bridge_failed_tool_observe_act_loop (test_integration.CLIIntegrationTests.test_cli_bridge_failed_tool_observe_act_loop) ... ok
+test_concurrent_cli_calls_do_not_duplicate_costs (test_integration.CLIIntegrationTests.test_concurrent_cli_calls_do_not_duplicate_costs) ... ok
+test_extreme_clock_returns_json_error (test_integration.CLIIntegrationTests.test_extreme_clock_returns_json_error) ... ok
+test_failed_export_preserves_previous_file (test_integration.CLIIntegrationTests.test_failed_export_preserves_previous_file) ... ok
+test_http_faults_return_incomplete_with_success_retained (test_integration.CLIIntegrationTests.test_http_faults_return_incomplete_with_success_retained) ... skipped '本机 TCP 不可用（errno=13，winerror=10013）'
+test_http_replanning_receives_actual_observations (test_integration.CLIIntegrationTests.test_http_replanning_receives_actual_observations) ... skipped '本机 TCP 不可用（errno=13，winerror=10013）'
+test_http_tool_failure_keeps_assets_and_replans (test_integration.CLIIntegrationTests.test_http_tool_failure_keeps_assets_and_replans) ... skipped '本机 TCP 不可用（errno=13，winerror=10013）'
+test_output_cannot_overwrite_request_or_database (test_integration.CLIIntegrationTests.test_output_cannot_overwrite_request_or_database) ... ok
+test_cli_publishes_tool_contracts (test_requirements.RequirementTests.test_cli_publishes_tool_contracts) ... ok
+test_custom_catalog_and_invalid_fee_validation (test_requirements.RequirementTests.test_custom_catalog_and_invalid_fee_validation) ... ok
+test_dag_contracts_accounting_and_snapshots (test_requirements.RequirementTests.test_dag_contracts_accounting_and_snapshots) ... ok
+test_dependency_failure_blocks_actual_save (test_requirements.RequirementTests.test_dependency_failure_blocks_actual_save) ... ok
+test_direct_save_is_idempotent (test_requirements.RequirementTests.test_direct_save_is_idempotent) ... ok
+test_failed_attempt_never_changes_to_success (test_requirements.RequirementTests.test_failed_attempt_never_changes_to_success) ... ok
+test_legacy_checkpoint_reconstruction_preserves_charges (test_requirements.RequirementTests.test_legacy_checkpoint_reconstruction_preserves_charges) ... ok
+test_missing_fields_are_structured_and_all_steps_blocked (test_requirements.RequirementTests.test_missing_fields_are_structured_and_all_steps_blocked) ... ok
+test_paid_script_cannot_be_relabelled_as_another_plan (test_requirements.RequirementTests.test_paid_script_cannot_be_relabelled_as_another_plan) ... ok
+test_partial_results_can_support_explicit_degradation (test_requirements.RequirementTests.test_partial_results_can_support_explicit_degradation) ... ok
+test_partial_success_retries_only_failed_item (test_requirements.RequirementTests.test_partial_success_retries_only_failed_item) ... ok
+test_rejected_plan_and_reused_results_preserved (test_requirements.RequirementTests.test_rejected_plan_and_reused_results_preserved) ... ok
+test_resume_preserves_old_failure_and_adds_two_attempts (test_requirements.RequirementTests.test_resume_preserves_old_failure_and_adds_two_attempts) ... ok
+test_run_ids_and_step_keys_with_cached_result (test_requirements.RequirementTests.test_run_ids_and_step_keys_with_cached_result) ... ok
+test_unknown_variant_is_structured_failure (test_requirements.RequirementTests.test_unknown_variant_is_structured_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 57 tests in 26.179s
+
+OK (skipped=3)

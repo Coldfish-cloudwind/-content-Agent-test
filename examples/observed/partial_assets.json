@@ -1,0 +1,1602 @@
+{
+  "campaign_id": "partial_assets",
+  "status": "completed",
+  "reason": null,
+  "invocation": "executed",
+  "new_steps": 4,
+  "revision": 4,
+  "timeline": "2030-05-01T01:00:00+00:00",
+  "steps": {
+    "search_assets": "succeeded",
+    "estimate_cost": "succeeded",
+    "generate_script": "succeeded",
+    "save_plan": "succeeded"
+  },
+  "assets": [
+    {
+      "id": "B01",
+      "title": "旧书交换书签",
+      "kind": "image",
+      "tags": [
+        "旧书",
+        "换书",
+        "读书"
+      ],
+      "detail": "书签留有推荐语和交换留言区。"
+    }
+  ],
+  "asset_failures": [],
+  "quotes": {
+    "lite": {
+      "variant": "lite",
+      "total": 8,
+      "remaining_units": 7,
+      "finish": "2030-05-01T01:15:00+00:00",
+      "budget_gap": 0,
+      "late_minutes": 0,
+      "feasible": true
+    }
+  },
+  "script": {
+    "title": "社区旧书交换会｜一起参与",
+    "variant": "lite",
+    "channel": "社交图文",
+    "objective": "引导潜在参与者收藏活动信息、留言并邀请同伴。",
+    "beats": [
+      {
+        "position": "首图（视频素材取首帧）",
+        "asset": "B01",
+        "visual": "书签留有推荐语和交换留言区。",
+        "copy": "社区旧书交换会｜一起参与"
+      },
+      {
+        "position": "正文",
+        "asset": "B01",
+        "visual": "裁切主视觉并叠加互动提示",
+        "copy": "看到「旧书交换书签」，你想先体验什么？收藏活动卡，留言约个搭子。"
+      }
+    ]
+  },
+  "charges": [
+    {
+      "tool": "search_assets",
+      "units": 1,
+      "minutes": 3,
+      "start": "2030-05-01T01:00:00+00:00",
+      "finish": "2030-05-01T01:03:00+00:00"
+    },
+    {
+      "tool": "generate_script",
+      "units": 5,
+      "minutes": 9,
+      "start": "2030-05-01T01:03:00+00:00",
+      "finish": "2030-05-01T01:12:00+00:00"
+    },
+    {
+      "tool": "save_plan",
+      "units": 2,
+      "minutes": 3,
+      "start": "2030-05-01T01:12:00+00:00",
+      "finish": "2030-05-01T01:15:00+00:00"
+    }
+  ],
+  "total_cost": 8,
+  "saved_plan": {
+    "campaign_id": "partial_assets",
+    "topic": "社区旧书交换会",
+    "deadline": "2030-05-01T10:00:00+08:00",
+    "budget": 10,
+    "total_cost": 8,
+    "script": {
+      "title": "社区旧书交换会｜一起参与",
+      "variant": "lite",
+      "channel": "社交图文",
+      "objective": "引导潜在参与者收藏活动信息、留言并邀请同伴。",
+      "beats": [
+        {
+          "position": "首图（视频素材取首帧）",
+          "asset": "B01",
+          "visual": "书签留有推荐语和交换留言区。",
+          "copy": "社区旧书交换会｜一起参与"
+        },
+        {
+          "position": "正文",
+          "asset": "B01",
+          "visual": "裁切主视觉并叠加互动提示",
+          "copy": "看到「旧书交换书签」，你想先体验什么？收藏活动卡，留言约个搭子。"
+        }
+      ]
+    },
+    "production_schedule": [
+      {
+        "tool": "search_assets",
+        "units": 1,
+        "minutes": 3,
+        "start": "2030-05-01T01:00:00+00:00",
+        "finish": "2030-05-01T01:03:00+00:00",
+        "owner": "素材运营"
+      },
+      {
+        "tool": "generate_script",
+        "units": 5,
+        "minutes": 9,
+        "start": "2030-05-01T01:03:00+00:00",
+        "finish": "2030-05-01T01:12:00+00:00",
+        "owner": "内容编辑"
+      },
+      {
+        "tool": "save_plan",
+        "units": 2,
+        "minutes": 3,
+        "start": "2030-05-01T01:12:00+00:00",
+        "finish": "2030-05-01T01:15:00+00:00",
+        "owner": "活动运营"
+      }
+    ],
+    "handoff": [
+      "按分镜排版或剪辑",
+      "发布前核对活动信息与字幕",
+      "发布后记录收藏和评论数量"
+    ]
+  },
+  "trace": [
+    {
+      "step": 1,
+      "session": 1,
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "model": "mock",
+      "action": "search_assets",
+      "args": {},
+      "reason": "按主题查询合成素材。",
+      "observation": {
+        "ok": true,
+        "code": "assets_found",
+        "assets": [
+          {
+            "id": "B01",
+            "title": "旧书交换书签",
+            "kind": "image",
+            "tags": [
+              "旧书",
+              "换书",
+              "读书"
+            ],
+            "detail": "书签留有推荐语和交换留言区。"
+          }
+        ],
+        "retrieved_asset_ids": [
+          "B01"
+        ],
+        "failed_asset_ids": [],
+        "item_results": [
+          {
+            "asset_id": "B01",
+            "status": "success",
+            "cost": 1,
+            "error": null
+          }
+        ],
+        "available_variants": [
+          "lite"
+        ],
+        "step_id": "p1.search_assets",
+        "status": "success",
+        "cost": 1,
+        "duration": 3,
+        "estimated_cost": 1,
+        "estimated_duration": 3,
+        "output": {
+          "assets": [
+            {
+              "id": "B01",
+              "title": "旧书交换书签",
+              "kind": "image",
+              "tags": [
+                "旧书",
+                "换书",
+                "读书"
+              ],
+              "detail": "书签留有推荐语和交换留言区。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "B01"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "B01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "lite"
+          ]
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+        "attempt_id": "partial_assets.attempt-1"
+      },
+      "spent_after": 1,
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 2,
+      "session": 1,
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "model": "mock",
+      "action": "estimate_cost",
+      "args": {
+        "variant": "lite"
+      },
+      "reason": "素材支持 lite，需要确认费用和交付时间。",
+      "observation": {
+        "ok": true,
+        "code": "quote",
+        "variant": "lite",
+        "total": 8,
+        "remaining_units": 7,
+        "finish": "2030-05-01T01:15:00+00:00",
+        "budget_gap": 0,
+        "late_minutes": 0,
+        "feasible": true,
+        "step_id": "p2.estimate_cost",
+        "status": "success",
+        "cost": 0,
+        "duration": 0,
+        "estimated_cost": 0,
+        "estimated_duration": 0,
+        "output": {
+          "variant": "lite",
+          "total": 8,
+          "remaining_units": 7,
+          "finish": "2030-05-01T01:15:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "4d649f46ec6d7c45db9e03572b364554aed423c2ab5bb82c1a13012a986babb6",
+        "attempt_id": "partial_assets.attempt-2"
+      },
+      "spent_after": 1,
+      "next_action": "generate_script"
+    },
+    {
+      "step": 3,
+      "session": 1,
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "model": "mock",
+      "action": "generate_script",
+      "args": {
+        "variant": "lite"
+      },
+      "reason": "lite 报价 8，时间与预算均满足。",
+      "observation": {
+        "ok": true,
+        "code": "script_ready",
+        "variant": "lite",
+        "title": "社区旧书交换会｜一起参与",
+        "segments": 2,
+        "step_id": "p2.generate_script",
+        "status": "success",
+        "cost": 5,
+        "duration": 9,
+        "estimated_cost": 5,
+        "estimated_duration": 9,
+        "output": {
+          "variant": "lite",
+          "title": "社区旧书交换会｜一起参与",
+          "segments": 2
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "344ac9720778f095d5b731c5d413d3397db718846d276399dbf1e74eb52cf997",
+        "attempt_id": "partial_assets.attempt-3"
+      },
+      "spent_after": 6,
+      "next_action": "save_plan"
+    },
+    {
+      "step": 4,
+      "session": 1,
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "model": "mock",
+      "action": "save_plan",
+      "args": {},
+      "reason": "已有脚本，复用该版本完成保存。",
+      "observation": {
+        "ok": true,
+        "code": "saved",
+        "variant": "lite",
+        "total_cost": 8,
+        "id": "partial_assets",
+        "finish": "2030-05-01T01:15:00+00:00",
+        "step_id": "p2.save_plan",
+        "status": "success",
+        "cost": 2,
+        "duration": 3,
+        "estimated_cost": 2,
+        "estimated_duration": 3,
+        "output": {
+          "variant": "lite",
+          "total_cost": 8,
+          "id": "partial_assets",
+          "finish": "2030-05-01T01:15:00+00:00"
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+        "attempt_id": "partial_assets.attempt-4"
+      },
+      "spent_after": 8,
+      "next_action": "completed"
+    }
+  ],
+  "task_id": "partial_assets",
+  "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+  "task_plan": {
+    "version": 2,
+    "kind": "initial",
+    "variant": "lite",
+    "status": "completed",
+    "created_after_step": 1,
+    "trigger": {
+      "code": "assets_found",
+      "model_reason": "素材支持 lite，需要确认费用和交付时间。",
+      "observation": {
+        "ok": true,
+        "code": "assets_found",
+        "assets": [
+          {
+            "id": "B01",
+            "title": "旧书交换书签",
+            "kind": "image",
+            "tags": [
+              "旧书",
+              "换书",
+              "读书"
+            ],
+            "detail": "书签留有推荐语和交换留言区。"
+          }
+        ],
+        "retrieved_asset_ids": [
+          "B01"
+        ],
+        "failed_asset_ids": [],
+        "item_results": [
+          {
+            "asset_id": "B01",
+            "status": "success",
+            "cost": 1,
+            "error": null
+          }
+        ],
+        "available_variants": [
+          "lite"
+        ],
+        "step_id": "p1.search_assets",
+        "status": "success",
+        "cost": 1,
+        "duration": 3,
+        "estimated_cost": 1,
+        "estimated_duration": 3,
+        "output": {
+          "assets": [
+            {
+              "id": "B01",
+              "title": "旧书交换书签",
+              "kind": "image",
+              "tags": [
+                "旧书",
+                "换书",
+                "读书"
+              ],
+              "detail": "书签留有推荐语和交换留言区。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "B01"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "B01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "lite"
+          ]
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+        "attempt_id": "partial_assets.attempt-1"
+      },
+      "category": "model_selection_or_resume"
+    },
+    "steps": [
+      {
+        "step_id": "p2.search_assets",
+        "tool": "search_assets",
+        "inputs": {
+          "topic": "社区旧书交换会"
+        },
+        "depends_on": [],
+        "input_refs": [],
+        "expected_output": "search_assets_result",
+        "estimated_cost": 1,
+        "estimated_duration": 3,
+        "critical": true,
+        "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+        "attempt_refs": [
+          "partial_assets.attempt-1"
+        ],
+        "actual_cost": 1,
+        "actual_duration": 3,
+        "result": {
+          "ok": true,
+          "code": "assets_found",
+          "assets": [
+            {
+              "id": "B01",
+              "title": "旧书交换书签",
+              "kind": "image",
+              "tags": [
+                "旧书",
+                "换书",
+                "读书"
+              ],
+              "detail": "书签留有推荐语和交换留言区。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "B01"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "B01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "lite"
+          ],
+          "step_id": "p1.search_assets",
+          "status": "success",
+          "cost": 1,
+          "duration": 3,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {
+            "assets": [
+              {
+                "id": "B01",
+                "title": "旧书交换书签",
+                "kind": "image",
+                "tags": [
+                  "旧书",
+                  "换书",
+                  "读书"
+                ],
+                "detail": "书签留有推荐语和交换留言区。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "B01"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "B01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "lite"
+            ]
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+          "attempt_id": "partial_assets.attempt-1"
+        },
+        "status": "success",
+        "blocked_by": [],
+        "reused": true
+      },
+      {
+        "step_id": "p2.estimate_cost",
+        "tool": "estimate_cost",
+        "inputs": {
+          "variant": "lite"
+        },
+        "depends_on": [
+          "p2.search_assets"
+        ],
+        "input_refs": [
+          "p2.search_assets.output"
+        ],
+        "expected_output": "estimate_cost_result",
+        "estimated_cost": 0,
+        "estimated_duration": 0,
+        "critical": true,
+        "idempotency_key": "4d649f46ec6d7c45db9e03572b364554aed423c2ab5bb82c1a13012a986babb6",
+        "attempt_refs": [
+          "partial_assets.attempt-2"
+        ],
+        "actual_cost": 0,
+        "actual_duration": 0,
+        "result": {
+          "ok": true,
+          "code": "quote",
+          "variant": "lite",
+          "total": 8,
+          "remaining_units": 7,
+          "finish": "2030-05-01T01:15:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true,
+          "step_id": "p2.estimate_cost",
+          "status": "success",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "output": {
+            "variant": "lite",
+            "total": 8,
+            "remaining_units": 7,
+            "finish": "2030-05-01T01:15:00+00:00",
+            "budget_gap": 0,
+            "late_minutes": 0,
+            "feasible": true
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "4d649f46ec6d7c45db9e03572b364554aed423c2ab5bb82c1a13012a986babb6",
+          "attempt_id": "partial_assets.attempt-2"
+        },
+        "status": "success",
+        "blocked_by": [],
+        "reused": false,
+        "prior_status": "pending"
+      },
+      {
+        "step_id": "p2.generate_script",
+        "tool": "generate_script",
+        "inputs": {
+          "variant": "lite"
+        },
+        "depends_on": [
+          "p2.search_assets",
+          "p2.estimate_cost"
+        ],
+        "input_refs": [
+          "p2.search_assets.output",
+          "p2.estimate_cost.output"
+        ],
+        "expected_output": "generate_script_result",
+        "estimated_cost": 5,
+        "estimated_duration": 9,
+        "critical": true,
+        "idempotency_key": "344ac9720778f095d5b731c5d413d3397db718846d276399dbf1e74eb52cf997",
+        "attempt_refs": [
+          "partial_assets.attempt-3"
+        ],
+        "actual_cost": 5,
+        "actual_duration": 9,
+        "result": {
+          "ok": true,
+          "code": "script_ready",
+          "variant": "lite",
+          "title": "社区旧书交换会｜一起参与",
+          "segments": 2,
+          "step_id": "p2.generate_script",
+          "status": "success",
+          "cost": 5,
+          "duration": 9,
+          "estimated_cost": 5,
+          "estimated_duration": 9,
+          "output": {
+            "variant": "lite",
+            "title": "社区旧书交换会｜一起参与",
+            "segments": 2
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "344ac9720778f095d5b731c5d413d3397db718846d276399dbf1e74eb52cf997",
+          "attempt_id": "partial_assets.attempt-3"
+        },
+        "status": "success",
+        "blocked_by": [],
+        "reused": false,
+        "prior_status": "pending"
+      },
+      {
+        "step_id": "p2.save_plan",
+        "tool": "save_plan",
+        "inputs": {},
+        "depends_on": [
+          "p2.estimate_cost",
+          "p2.generate_script"
+        ],
+        "input_refs": [
+          "p2.estimate_cost.output",
+          "p2.generate_script.output"
+        ],
+        "expected_output": "save_plan_result",
+        "estimated_cost": 2,
+        "estimated_duration": 3,
+        "critical": true,
+        "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+        "attempt_refs": [
+          "partial_assets.attempt-4"
+        ],
+        "actual_cost": 2,
+        "actual_duration": 3,
+        "result": {
+          "ok": true,
+          "code": "saved",
+          "variant": "lite",
+          "total_cost": 8,
+          "id": "partial_assets",
+          "finish": "2030-05-01T01:15:00+00:00",
+          "step_id": "p2.save_plan",
+          "status": "success",
+          "cost": 2,
+          "duration": 3,
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "output": {
+            "variant": "lite",
+            "total_cost": 8,
+            "id": "partial_assets",
+            "finish": "2030-05-01T01:15:00+00:00"
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+          "attempt_id": "partial_assets.attempt-4"
+        },
+        "status": "success",
+        "blocked_by": [],
+        "reused": false,
+        "prior_status": "pending"
+      }
+    ],
+    "actual_cost": 8,
+    "estimated_total_cost": 8,
+    "estimated_finish": "2030-05-01T01:15:00+00:00"
+  },
+  "plan_versions": [
+    {
+      "version": 1,
+      "kind": "initial",
+      "variant": null,
+      "status": "abandoned",
+      "created_after_step": 0,
+      "trigger": {
+        "code": "task_received"
+      },
+      "steps": [
+        {
+          "step_id": "p1.search_assets",
+          "tool": "search_assets",
+          "inputs": {
+            "topic": "社区旧书交换会"
+          },
+          "depends_on": [],
+          "input_refs": [],
+          "expected_output": "search_assets_result",
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+          "attempt_refs": [
+            "partial_assets.attempt-1"
+          ],
+          "actual_cost": 1,
+          "actual_duration": 3,
+          "result": {
+            "ok": true,
+            "code": "assets_found",
+            "assets": [
+              {
+                "id": "B01",
+                "title": "旧书交换书签",
+                "kind": "image",
+                "tags": [
+                  "旧书",
+                  "换书",
+                  "读书"
+                ],
+                "detail": "书签留有推荐语和交换留言区。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "B01"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "B01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "lite"
+            ],
+            "step_id": "p1.search_assets",
+            "status": "success",
+            "cost": 1,
+            "duration": 3,
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "output": {
+              "assets": [
+                {
+                  "id": "B01",
+                  "title": "旧书交换书签",
+                  "kind": "image",
+                  "tags": [
+                    "旧书",
+                    "换书",
+                    "读书"
+                  ],
+                  "detail": "书签留有推荐语和交换留言区。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "B01"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "B01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "lite"
+              ]
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+            "attempt_id": "partial_assets.attempt-1"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        },
+        {
+          "step_id": "p1.estimate_cost",
+          "tool": "estimate_cost",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets"
+          ],
+          "input_refs": [
+            "p1.search_assets.output"
+          ],
+          "expected_output": "estimate_cost_result",
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "critical": true,
+          "idempotency_key": "9dc8d61df441410ee450c020e3f27aa22e8ceaa0a55fbdab09fcf7563ca23ac3",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "pending",
+          "blocked_by": [],
+          "reused": false
+        },
+        {
+          "step_id": "p1.generate_script",
+          "tool": "generate_script",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets",
+            "p1.estimate_cost"
+          ],
+          "input_refs": [
+            "p1.search_assets.output",
+            "p1.estimate_cost.output"
+          ],
+          "expected_output": "generate_script_result",
+          "estimated_cost": null,
+          "estimated_duration": null,
+          "critical": true,
+          "idempotency_key": "e974a039dd86a5ed1a2004db522ca7299bcd40a6c82fb9b3eb8b11e68833bcc3",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.estimate_cost"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.save_plan",
+          "tool": "save_plan",
+          "inputs": {},
+          "depends_on": [
+            "p1.estimate_cost",
+            "p1.generate_script"
+          ],
+          "input_refs": [
+            "p1.estimate_cost.output",
+            "p1.generate_script.output"
+          ],
+          "expected_output": "save_plan_result",
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.estimate_cost",
+            "p1.generate_script"
+          ],
+          "reused": false
+        }
+      ],
+      "actual_cost": 1,
+      "estimated_total_cost": null,
+      "estimated_finish": null
+    },
+    {
+      "version": 2,
+      "kind": "initial",
+      "variant": "lite",
+      "status": "completed",
+      "created_after_step": 1,
+      "trigger": {
+        "code": "assets_found",
+        "model_reason": "素材支持 lite，需要确认费用和交付时间。",
+        "observation": {
+          "ok": true,
+          "code": "assets_found",
+          "assets": [
+            {
+              "id": "B01",
+              "title": "旧书交换书签",
+              "kind": "image",
+              "tags": [
+                "旧书",
+                "换书",
+                "读书"
+              ],
+              "detail": "书签留有推荐语和交换留言区。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "B01"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "B01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "lite"
+          ],
+          "step_id": "p1.search_assets",
+          "status": "success",
+          "cost": 1,
+          "duration": 3,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {
+            "assets": [
+              {
+                "id": "B01",
+                "title": "旧书交换书签",
+                "kind": "image",
+                "tags": [
+                  "旧书",
+                  "换书",
+                  "读书"
+                ],
+                "detail": "书签留有推荐语和交换留言区。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "B01"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "B01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "lite"
+            ]
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+          "attempt_id": "partial_assets.attempt-1"
+        },
+        "category": "model_selection_or_resume"
+      },
+      "steps": [
+        {
+          "step_id": "p2.search_assets",
+          "tool": "search_assets",
+          "inputs": {
+            "topic": "社区旧书交换会"
+          },
+          "depends_on": [],
+          "input_refs": [],
+          "expected_output": "search_assets_result",
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+          "attempt_refs": [
+            "partial_assets.attempt-1"
+          ],
+          "actual_cost": 1,
+          "actual_duration": 3,
+          "result": {
+            "ok": true,
+            "code": "assets_found",
+            "assets": [
+              {
+                "id": "B01",
+                "title": "旧书交换书签",
+                "kind": "image",
+                "tags": [
+                  "旧书",
+                  "换书",
+                  "读书"
+                ],
+                "detail": "书签留有推荐语和交换留言区。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "B01"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "B01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "lite"
+            ],
+            "step_id": "p1.search_assets",
+            "status": "success",
+            "cost": 1,
+            "duration": 3,
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "output": {
+              "assets": [
+                {
+                  "id": "B01",
+                  "title": "旧书交换书签",
+                  "kind": "image",
+                  "tags": [
+                    "旧书",
+                    "换书",
+                    "读书"
+                  ],
+                  "detail": "书签留有推荐语和交换留言区。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "B01"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "B01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "lite"
+              ]
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+            "attempt_id": "partial_assets.attempt-1"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": true
+        },
+        {
+          "step_id": "p2.estimate_cost",
+          "tool": "estimate_cost",
+          "inputs": {
+            "variant": "lite"
+          },
+          "depends_on": [
+            "p2.search_assets"
+          ],
+          "input_refs": [
+            "p2.search_assets.output"
+          ],
+          "expected_output": "estimate_cost_result",
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "critical": true,
+          "idempotency_key": "4d649f46ec6d7c45db9e03572b364554aed423c2ab5bb82c1a13012a986babb6",
+          "attempt_refs": [
+            "partial_assets.attempt-2"
+          ],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": {
+            "ok": true,
+            "code": "quote",
+            "variant": "lite",
+            "total": 8,
+            "remaining_units": 7,
+            "finish": "2030-05-01T01:15:00+00:00",
+            "budget_gap": 0,
+            "late_minutes": 0,
+            "feasible": true,
+            "step_id": "p2.estimate_cost",
+            "status": "success",
+            "cost": 0,
+            "duration": 0,
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "output": {
+              "variant": "lite",
+              "total": 8,
+              "remaining_units": 7,
+              "finish": "2030-05-01T01:15:00+00:00",
+              "budget_gap": 0,
+              "late_minutes": 0,
+              "feasible": true
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "4d649f46ec6d7c45db9e03572b364554aed423c2ab5bb82c1a13012a986babb6",
+            "attempt_id": "partial_assets.attempt-2"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        },
+        {
+          "step_id": "p2.generate_script",
+          "tool": "generate_script",
+          "inputs": {
+            "variant": "lite"
+          },
+          "depends_on": [
+            "p2.search_assets",
+            "p2.estimate_cost"
+          ],
+          "input_refs": [
+            "p2.search_assets.output",
+            "p2.estimate_cost.output"
+          ],
+          "expected_output": "generate_script_result",
+          "estimated_cost": 5,
+          "estimated_duration": 9,
+          "critical": true,
+          "idempotency_key": "344ac9720778f095d5b731c5d413d3397db718846d276399dbf1e74eb52cf997",
+          "attempt_refs": [
+            "partial_assets.attempt-3"
+          ],
+          "actual_cost": 5,
+          "actual_duration": 9,
+          "result": {
+            "ok": true,
+            "code": "script_ready",
+            "variant": "lite",
+            "title": "社区旧书交换会｜一起参与",
+            "segments": 2,
+            "step_id": "p2.generate_script",
+            "status": "success",
+            "cost": 5,
+            "duration": 9,
+            "estimated_cost": 5,
+            "estimated_duration": 9,
+            "output": {
+              "variant": "lite",
+              "title": "社区旧书交换会｜一起参与",
+              "segments": 2
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "344ac9720778f095d5b731c5d413d3397db718846d276399dbf1e74eb52cf997",
+            "attempt_id": "partial_assets.attempt-3"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        },
+        {
+          "step_id": "p2.save_plan",
+          "tool": "save_plan",
+          "inputs": {},
+          "depends_on": [
+            "p2.estimate_cost",
+            "p2.generate_script"
+          ],
+          "input_refs": [
+            "p2.estimate_cost.output",
+            "p2.generate_script.output"
+          ],
+          "expected_output": "save_plan_result",
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+          "attempt_refs": [
+            "partial_assets.attempt-4"
+          ],
+          "actual_cost": 2,
+          "actual_duration": 3,
+          "result": {
+            "ok": true,
+            "code": "saved",
+            "variant": "lite",
+            "total_cost": 8,
+            "id": "partial_assets",
+            "finish": "2030-05-01T01:15:00+00:00",
+            "step_id": "p2.save_plan",
+            "status": "success",
+            "cost": 2,
+            "duration": 3,
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "output": {
+              "variant": "lite",
+              "total_cost": 8,
+              "id": "partial_assets",
+              "finish": "2030-05-01T01:15:00+00:00"
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+            "attempt_id": "partial_assets.attempt-4"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        }
+      ],
+      "actual_cost": 8,
+      "estimated_total_cost": 8,
+      "estimated_finish": "2030-05-01T01:15:00+00:00"
+    }
+  ],
+  "replanning": [
+    {
+      "from_version": 1,
+      "to_version": 2,
+      "trigger": {
+        "code": "assets_found",
+        "model_reason": "素材支持 lite，需要确认费用和交付时间。",
+        "observation": {
+          "ok": true,
+          "code": "assets_found",
+          "assets": [
+            {
+              "id": "B01",
+              "title": "旧书交换书签",
+              "kind": "image",
+              "tags": [
+                "旧书",
+                "换书",
+                "读书"
+              ],
+              "detail": "书签留有推荐语和交换留言区。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "B01"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "B01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "lite"
+          ],
+          "step_id": "p1.search_assets",
+          "status": "success",
+          "cost": 1,
+          "duration": 3,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {
+            "assets": [
+              {
+                "id": "B01",
+                "title": "旧书交换书签",
+                "kind": "image",
+                "tags": [
+                  "旧书",
+                  "换书",
+                  "读书"
+                ],
+                "detail": "书签留有推荐语和交换留言区。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "B01"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "B01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "lite"
+            ]
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+          "attempt_id": "partial_assets.attempt-1"
+        },
+        "category": "model_selection_or_resume"
+      },
+      "changes": {
+        "variant": {
+          "old": null,
+          "new": "lite"
+        },
+        "reused_steps": [
+          "search_assets"
+        ],
+        "retry_steps": []
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "attempt_id": "partial_assets.attempt-1",
+      "plan_version": 1,
+      "step_id": "p1.search_assets",
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "session": 1,
+      "action": "search_assets",
+      "args": {},
+      "transitions": [
+        "pending",
+        "running",
+        "success"
+      ],
+      "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+      "result": {
+        "ok": true,
+        "code": "assets_found",
+        "assets": [
+          {
+            "id": "B01",
+            "title": "旧书交换书签",
+            "kind": "image",
+            "tags": [
+              "旧书",
+              "换书",
+              "读书"
+            ],
+            "detail": "书签留有推荐语和交换留言区。"
+          }
+        ],
+        "retrieved_asset_ids": [
+          "B01"
+        ],
+        "failed_asset_ids": [],
+        "item_results": [
+          {
+            "asset_id": "B01",
+            "status": "success",
+            "cost": 1,
+            "error": null
+          }
+        ],
+        "available_variants": [
+          "lite"
+        ],
+        "step_id": "p1.search_assets",
+        "status": "success",
+        "cost": 1,
+        "duration": 3,
+        "estimated_cost": 1,
+        "estimated_duration": 3,
+        "output": {
+          "assets": [
+            {
+              "id": "B01",
+              "title": "旧书交换书签",
+              "kind": "image",
+              "tags": [
+                "旧书",
+                "换书",
+                "读书"
+              ],
+              "detail": "书签留有推荐语和交换留言区。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "B01"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "B01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "lite"
+          ]
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "3eb0e4682c3b976c431e359d866a13395c7762178c97b6ef2234dd98e1af7320",
+        "attempt_id": "partial_assets.attempt-1"
+      }
+    },
+    {
+      "attempt_id": "partial_assets.attempt-2",
+      "plan_version": 2,
+      "step_id": "p2.estimate_cost",
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "session": 1,
+      "action": "estimate_cost",
+      "args": {
+        "variant": "lite"
+      },
+      "transitions": [
+        "pending",
+        "running",
+        "success"
+      ],
+      "idempotency_key": "4d649f46ec6d7c45db9e03572b364554aed423c2ab5bb82c1a13012a986babb6",
+      "result": {
+        "ok": true,
+        "code": "quote",
+        "variant": "lite",
+        "total": 8,
+        "remaining_units": 7,
+        "finish": "2030-05-01T01:15:00+00:00",
+        "budget_gap": 0,
+        "late_minutes": 0,
+        "feasible": true,
+        "step_id": "p2.estimate_cost",
+        "status": "success",
+        "cost": 0,
+        "duration": 0,
+        "estimated_cost": 0,
+        "estimated_duration": 0,
+        "output": {
+          "variant": "lite",
+          "total": 8,
+          "remaining_units": 7,
+          "finish": "2030-05-01T01:15:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "4d649f46ec6d7c45db9e03572b364554aed423c2ab5bb82c1a13012a986babb6",
+        "attempt_id": "partial_assets.attempt-2"
+      }
+    },
+    {
+      "attempt_id": "partial_assets.attempt-3",
+      "plan_version": 2,
+      "step_id": "p2.generate_script",
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "session": 1,
+      "action": "generate_script",
+      "args": {
+        "variant": "lite"
+      },
+      "transitions": [
+        "pending",
+        "running",
+        "success"
+      ],
+      "idempotency_key": "344ac9720778f095d5b731c5d413d3397db718846d276399dbf1e74eb52cf997",
+      "result": {
+        "ok": true,
+        "code": "script_ready",
+        "variant": "lite",
+        "title": "社区旧书交换会｜一起参与",
+        "segments": 2,
+        "step_id": "p2.generate_script",
+        "status": "success",
+        "cost": 5,
+        "duration": 9,
+        "estimated_cost": 5,
+        "estimated_duration": 9,
+        "output": {
+          "variant": "lite",
+          "title": "社区旧书交换会｜一起参与",
+          "segments": 2
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "344ac9720778f095d5b731c5d413d3397db718846d276399dbf1e74eb52cf997",
+        "attempt_id": "partial_assets.attempt-3"
+      }
+    },
+    {
+      "attempt_id": "partial_assets.attempt-4",
+      "plan_version": 2,
+      "step_id": "p2.save_plan",
+      "run_id": "c6100bed6b004cba888e6f5aae585c5a",
+      "session": 1,
+      "action": "save_plan",
+      "args": {},
+      "transitions": [
+        "pending",
+        "running",
+        "success"
+      ],
+      "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+      "result": {
+        "ok": true,
+        "code": "saved",
+        "variant": "lite",
+        "total_cost": 8,
+        "id": "partial_assets",
+        "finish": "2030-05-01T01:15:00+00:00",
+        "step_id": "p2.save_plan",
+        "status": "success",
+        "cost": 2,
+        "duration": 3,
+        "estimated_cost": 2,
+        "estimated_duration": 3,
+        "output": {
+          "variant": "lite",
+          "total_cost": 8,
+          "id": "partial_assets",
+          "finish": "2030-05-01T01:15:00+00:00"
+        },
+        "error": null,
+        "reused": false,
+        "idempotency_key": "d4032bfc239732a5771d565a41c752b30a75a5d29e8651016c21986cccdb6e62",
+        "attempt_id": "partial_assets.attempt-4"
+      }
+    }
+  ],
+  "snapshots": [
+    {
+      "after_step": 1,
+      "session": 1,
+      "plan_version": 1,
+      "status": "running",
+      "spent": 1,
+      "asset_ids": [
+        "B01"
+      ],
+      "has_script": false,
+      "has_saved_plan": false,
+      "steps": {
+        "search_assets": "success",
+        "estimate_cost": "pending",
+        "generate_script": "blocked",
+        "save_plan": "blocked"
+      }
+    },
+    {
+      "after_step": 2,
+      "session": 1,
+      "plan_version": 2,
+      "status": "running",
+      "spent": 1,
+      "asset_ids": [
+        "B01"
+      ],
+      "has_script": false,
+      "has_saved_plan": false,
+      "steps": {
+        "search_assets": "success",
+        "estimate_cost": "success",
+        "generate_script": "pending",
+        "save_plan": "blocked"
+      }
+    },
+    {
+      "after_step": 3,
+      "session": 1,
+      "plan_version": 2,
+      "status": "running",
+      "spent": 6,
+      "asset_ids": [
+        "B01"
+      ],
+      "has_script": true,
+      "has_saved_plan": false,
+      "steps": {
+        "search_assets": "success",
+        "estimate_cost": "success",
+        "generate_script": "success",
+        "save_plan": "pending"
+      }
+    },
+    {
+      "after_step": 4,
+      "session": 1,
+      "plan_version": 2,
+      "status": "completed",
+      "spent": 8,
+      "asset_ids": [
+        "B01"
+      ],
+      "has_script": true,
+      "has_saved_plan": true,
+      "steps": {
+        "search_assets": "success",
+        "estimate_cost": "success",
+        "generate_script": "success",
+        "save_plan": "success"
+      }
+    }
+  ],
+  "unfinished": null
+}

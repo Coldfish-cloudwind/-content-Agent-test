@@ -1,0 +1,148 @@
+{
+  "campaign_id": "live_stop",
+  "status": "incomplete",
+  "reason": {
+    "code": "model_stopped",
+    "message": "最便宜的图文方案报价 8，现有预算 6，缺少 2 个单位；请增加预算后新建活动。"
+  },
+  "invocation": "executed",
+  "new_steps": 1,
+  "revision": 3,
+  "timeline": "2030-05-01T01:00:00+00:00",
+  "steps": {
+    "search_assets": "succeeded",
+    "estimate_cost": "succeeded",
+    "generate_script": "pending",
+    "save_plan": "pending"
+  },
+  "assets": [
+    {
+      "id": "C01",
+      "title": "校园跑道起跑的晨光",
+      "kind": "clip",
+      "tags": [
+        "校园",
+        "迎新",
+        "社团",
+        "跑步"
+      ],
+      "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+    },
+    {
+      "id": "C02",
+      "title": "社团摊位路线手绘卡",
+      "kind": "image",
+      "tags": [
+        "校园",
+        "迎新",
+        "社团"
+      ],
+      "detail": "卡片用图标标出集合点、体验区与签到处。"
+    }
+  ],
+  "quotes": {
+    "lite": {
+      "variant": "lite",
+      "total": 8,
+      "remaining_units": 7,
+      "finish": "2030-05-01T01:15:00+00:00",
+      "budget_gap": 2,
+      "late_minutes": 0,
+      "feasible": false
+    }
+  },
+  "script": null,
+  "charges": [
+    {
+      "tool": "search_assets",
+      "units": 1,
+      "minutes": 3,
+      "start": "2030-05-01T01:00:00+00:00",
+      "finish": "2030-05-01T01:03:00+00:00"
+    }
+  ],
+  "total_cost": 1,
+  "saved_plan": null,
+  "trace": [
+    {
+      "step": 1,
+      "session": 1,
+      "model": "bridge/Codex",
+      "action": "search_assets",
+      "args": {},
+      "reason": "预算只有 6，先确认可用素材，再询价判断可行性。",
+      "observation": {
+        "ok": true,
+        "code": "assets_found",
+        "assets": [
+          {
+            "id": "C01",
+            "title": "校园跑道起跑的晨光",
+            "kind": "clip",
+            "tags": [
+              "校园",
+              "迎新",
+              "社团",
+              "跑步"
+            ],
+            "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+          },
+          {
+            "id": "C02",
+            "title": "社团摊位路线手绘卡",
+            "kind": "image",
+            "tags": [
+              "校园",
+              "迎新",
+              "社团"
+            ],
+            "detail": "卡片用图标标出集合点、体验区与签到处。"
+          }
+        ],
+        "available_variants": [
+          "studio",
+          "lite"
+        ]
+      },
+      "spent_after": 1,
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 2,
+      "session": 1,
+      "model": "bridge/Codex",
+      "action": "estimate_cost",
+      "args": {
+        "variant": "lite"
+      },
+      "reason": "预算较少，先评估素材要求较低的图文版本。",
+      "observation": {
+        "ok": true,
+        "code": "quote",
+        "variant": "lite",
+        "total": 8,
+        "remaining_units": 7,
+        "finish": "2030-05-01T01:15:00+00:00",
+        "budget_gap": 2,
+        "late_minutes": 0,
+        "feasible": false
+      },
+      "spent_after": 1,
+      "next_action": "stop"
+    },
+    {
+      "step": 3,
+      "session": 1,
+      "model": "bridge/Codex",
+      "action": "stop",
+      "args": {},
+      "reason": "最便宜的图文方案报价 8，现有预算 6，缺少 2 个单位；请增加预算后新建活动。",
+      "observation": {
+        "ok": true,
+        "code": "stopped"
+      },
+      "spent_after": 1,
+      "next_action": "incomplete"
+    }
+  ]
+}

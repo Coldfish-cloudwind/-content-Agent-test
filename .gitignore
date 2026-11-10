@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.runtime/
+.env
+.env.*
+!.env.example
+*.sqlite*
+*.bundle
+*.zip

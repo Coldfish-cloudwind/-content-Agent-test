@@ -1,0 +1,2432 @@
+{
+  "case": "failure",
+  "repeat": 2,
+  "model_mode": "mock",
+  "model": "deterministic-mock",
+  "elapsed_seconds": 0.5488,
+  "exit_code": 0,
+  "expected": {
+    "status": "completed",
+    "cost": 8,
+    "variant": "lite",
+    "observations": [
+      {
+        "code": "injected_unavailable",
+        "ok": false
+      }
+    ]
+  },
+  "expectation_matched": true,
+  "assessment": {
+    "checks": {
+      "ledger_total": true,
+      "nonnegative_charges": true,
+      "budget_respected": true,
+      "trace_sequence": true,
+      "completion_has_saved_plan": true,
+      "incomplete_has_reason": true,
+      "plan_is_dag": true,
+      "attempt_costs_match_ledger": true,
+      "failed_attempts_not_charged": true,
+      "attempt_ids_unique": true,
+      "step_result_references_valid": true,
+      "saved_total_matches": true,
+      "assets_grounded": true,
+      "script_fields_present": true,
+      "saved_event_present": true,
+      "schedule_matches_ledger": true,
+      "deadline_respected": true
+    },
+    "all_checks_passed": true
+  },
+  "result": {
+    "campaign_id": "failure",
+    "status": "completed",
+    "reason": null,
+    "invocation": "executed",
+    "new_steps": 6,
+    "revision": 6,
+    "timeline": "2030-05-01T01:00:00+00:00",
+    "steps": {
+      "search_assets": "succeeded",
+      "estimate_cost": "succeeded",
+      "generate_script": "succeeded",
+      "save_plan": "succeeded"
+    },
+    "assets": [
+      {
+        "id": "C01",
+        "title": "校园跑道起跑的晨光",
+        "kind": "clip",
+        "tags": [
+          "校园",
+          "迎新",
+          "社团",
+          "跑步"
+        ],
+        "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+      },
+      {
+        "id": "C02",
+        "title": "社团摊位路线手绘卡",
+        "kind": "image",
+        "tags": [
+          "校园",
+          "迎新",
+          "社团"
+        ],
+        "detail": "卡片用图标标出集合点、体验区与签到处。"
+      }
+    ],
+    "asset_failures": [],
+    "quotes": {
+      "studio": {
+        "variant": "studio",
+        "total": 12,
+        "remaining_units": 11,
+        "finish": "2030-05-01T01:38:00+00:00",
+        "budget_gap": 0,
+        "late_minutes": 0,
+        "feasible": true
+      },
+      "lite": {
+        "variant": "lite",
+        "total": 8,
+        "remaining_units": 7,
+        "finish": "2030-05-01T01:15:00+00:00",
+        "budget_gap": 0,
+        "late_minutes": 0,
+        "feasible": true
+      }
+    },
+    "script": {
+      "title": "校园迎新社团体验日｜一起参与",
+      "variant": "lite",
+      "channel": "社交图文",
+      "objective": "引导潜在参与者收藏活动信息、留言并邀请同伴。",
+      "beats": [
+        {
+          "position": "首图（视频素材取首帧）",
+          "asset": "C02",
+          "visual": "卡片用图标标出集合点、体验区与签到处。",
+          "copy": "校园迎新社团体验日｜一起参与"
+        },
+        {
+          "position": "正文",
+          "asset": "C02",
+          "visual": "裁切主视觉并叠加互动提示",
+          "copy": "看到「社团摊位路线手绘卡」，你想先体验什么？收藏活动卡，留言约个搭子。"
+        }
+      ]
+    },
+    "charges": [
+      {
+        "tool": "search_assets",
+        "units": 1,
+        "minutes": 3,
+        "start": "2030-05-01T01:00:00+00:00",
+        "finish": "2030-05-01T01:03:00+00:00"
+      },
+      {
+        "tool": "generate_script",
+        "units": 5,
+        "minutes": 9,
+        "start": "2030-05-01T01:03:00+00:00",
+        "finish": "2030-05-01T01:12:00+00:00"
+      },
+      {
+        "tool": "save_plan",
+        "units": 2,
+        "minutes": 3,
+        "start": "2030-05-01T01:12:00+00:00",
+        "finish": "2030-05-01T01:15:00+00:00"
+      }
+    ],
+    "total_cost": 8,
+    "saved_plan": {
+      "campaign_id": "failure",
+      "topic": "校园迎新社团体验日",
+      "deadline": "2030-05-01T10:00:00+08:00",
+      "budget": 15,
+      "total_cost": 8,
+      "script": {
+        "title": "校园迎新社团体验日｜一起参与",
+        "variant": "lite",
+        "channel": "社交图文",
+        "objective": "引导潜在参与者收藏活动信息、留言并邀请同伴。",
+        "beats": [
+          {
+            "position": "首图（视频素材取首帧）",
+            "asset": "C02",
+            "visual": "卡片用图标标出集合点、体验区与签到处。",
+            "copy": "校园迎新社团体验日｜一起参与"
+          },
+          {
+            "position": "正文",
+            "asset": "C02",
+            "visual": "裁切主视觉并叠加互动提示",
+            "copy": "看到「社团摊位路线手绘卡」，你想先体验什么？收藏活动卡，留言约个搭子。"
+          }
+        ]
+      },
+      "production_schedule": [
+        {
+          "tool": "search_assets",
+          "units": 1,
+          "minutes": 3,
+          "start": "2030-05-01T01:00:00+00:00",
+          "finish": "2030-05-01T01:03:00+00:00",
+          "owner": "素材运营"
+        },
+        {
+          "tool": "generate_script",
+          "units": 5,
+          "minutes": 9,
+          "start": "2030-05-01T01:03:00+00:00",
+          "finish": "2030-05-01T01:12:00+00:00",
+          "owner": "内容编辑"
+        },
+        {
+          "tool": "save_plan",
+          "units": 2,
+          "minutes": 3,
+          "start": "2030-05-01T01:12:00+00:00",
+          "finish": "2030-05-01T01:15:00+00:00",
+          "owner": "活动运营"
+        }
+      ],
+      "handoff": [
+        "按分镜排版或剪辑",
+        "发布前核对活动信息与字幕",
+        "发布后记录收藏和评论数量"
+      ]
+    },
+    "trace": [
+      {
+        "step": 1,
+        "session": 1,
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "model": "mock",
+        "action": "search_assets",
+        "args": {},
+        "reason": "按主题查询合成素材。",
+        "observation": {
+          "ok": true,
+          "code": "assets_found",
+          "assets": [
+            {
+              "id": "C01",
+              "title": "校园跑道起跑的晨光",
+              "kind": "clip",
+              "tags": [
+                "校园",
+                "迎新",
+                "社团",
+                "跑步"
+              ],
+              "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+            },
+            {
+              "id": "C02",
+              "title": "社团摊位路线手绘卡",
+              "kind": "image",
+              "tags": [
+                "校园",
+                "迎新",
+                "社团"
+              ],
+              "detail": "卡片用图标标出集合点、体验区与签到处。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "C01",
+            "C02"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "C01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            },
+            {
+              "asset_id": "C02",
+              "status": "success",
+              "cost": 0,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "studio",
+            "lite"
+          ],
+          "step_id": "p1.search_assets",
+          "status": "success",
+          "cost": 1,
+          "duration": 3,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {
+            "assets": [
+              {
+                "id": "C01",
+                "title": "校园跑道起跑的晨光",
+                "kind": "clip",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团",
+                  "跑步"
+                ],
+                "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+              },
+              {
+                "id": "C02",
+                "title": "社团摊位路线手绘卡",
+                "kind": "image",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团"
+                ],
+                "detail": "卡片用图标标出集合点、体验区与签到处。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "C01",
+              "C02"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "C01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              },
+              {
+                "asset_id": "C02",
+                "status": "success",
+                "cost": 0,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "studio",
+              "lite"
+            ]
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+          "attempt_id": "failure.attempt-1"
+        },
+        "spent_after": 1,
+        "next_action": "estimate_cost"
+      },
+      {
+        "step": 2,
+        "session": 1,
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "model": "mock",
+        "action": "estimate_cost",
+        "args": {
+          "variant": "studio"
+        },
+        "reason": "素材支持 studio，需要确认费用和交付时间。",
+        "observation": {
+          "ok": true,
+          "code": "quote",
+          "variant": "studio",
+          "total": 12,
+          "remaining_units": 11,
+          "finish": "2030-05-01T01:38:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true,
+          "step_id": "p2.estimate_cost",
+          "status": "success",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "output": {
+            "variant": "studio",
+            "total": 12,
+            "remaining_units": 11,
+            "finish": "2030-05-01T01:38:00+00:00",
+            "budget_gap": 0,
+            "late_minutes": 0,
+            "feasible": true
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "9fd9efa92cdf1634a558f5b97b09a8c583fed8cbd7b1a63a8c1abfd377f68f3f",
+          "attempt_id": "failure.attempt-2"
+        },
+        "spent_after": 1,
+        "next_action": "generate_script"
+      },
+      {
+        "step": 3,
+        "session": 1,
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "model": "mock",
+        "action": "generate_script",
+        "args": {
+          "variant": "studio"
+        },
+        "reason": "studio 报价 12，时间与预算均满足。",
+        "observation": {
+          "ok": false,
+          "code": "injected_unavailable",
+          "message": "本次调用未执行，费用为零。",
+          "step_id": "p2.generate_script",
+          "status": "failed",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 9,
+          "estimated_duration": 32,
+          "output": {},
+          "error": {
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。"
+          },
+          "reused": false,
+          "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+          "attempt_id": "failure.attempt-3"
+        },
+        "spent_after": 1,
+        "next_action": "estimate_cost"
+      },
+      {
+        "step": 4,
+        "session": 1,
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "model": "mock",
+        "action": "estimate_cost",
+        "args": {
+          "variant": "lite"
+        },
+        "reason": "素材支持 lite，需要确认费用和交付时间。",
+        "observation": {
+          "ok": true,
+          "code": "quote",
+          "variant": "lite",
+          "total": 8,
+          "remaining_units": 7,
+          "finish": "2030-05-01T01:15:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true,
+          "step_id": "p3.estimate_cost",
+          "status": "success",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "output": {
+            "variant": "lite",
+            "total": 8,
+            "remaining_units": 7,
+            "finish": "2030-05-01T01:15:00+00:00",
+            "budget_gap": 0,
+            "late_minutes": 0,
+            "feasible": true
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "e463c9fea89d73ce01eceef046bb817e4a8f2521f3f3722636cd9277d26b3390",
+          "attempt_id": "failure.attempt-4"
+        },
+        "spent_after": 1,
+        "next_action": "generate_script"
+      },
+      {
+        "step": 5,
+        "session": 1,
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "model": "mock",
+        "action": "generate_script",
+        "args": {
+          "variant": "lite"
+        },
+        "reason": "lite 报价 8，时间与预算均满足。",
+        "observation": {
+          "ok": true,
+          "code": "script_ready",
+          "variant": "lite",
+          "title": "校园迎新社团体验日｜一起参与",
+          "segments": 2,
+          "step_id": "p3.generate_script",
+          "status": "success",
+          "cost": 5,
+          "duration": 9,
+          "estimated_cost": 5,
+          "estimated_duration": 9,
+          "output": {
+            "variant": "lite",
+            "title": "校园迎新社团体验日｜一起参与",
+            "segments": 2
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "97d18bffa02d0fb209de7bb829840e1da7d9a215d9a23b3f8442f67bdc024bfd",
+          "attempt_id": "failure.attempt-5"
+        },
+        "spent_after": 6,
+        "next_action": "save_plan"
+      },
+      {
+        "step": 6,
+        "session": 1,
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "model": "mock",
+        "action": "save_plan",
+        "args": {},
+        "reason": "已有脚本，复用该版本完成保存。",
+        "observation": {
+          "ok": true,
+          "code": "saved",
+          "variant": "lite",
+          "total_cost": 8,
+          "id": "failure",
+          "finish": "2030-05-01T01:15:00+00:00",
+          "step_id": "p3.save_plan",
+          "status": "success",
+          "cost": 2,
+          "duration": 3,
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "output": {
+            "variant": "lite",
+            "total_cost": 8,
+            "id": "failure",
+            "finish": "2030-05-01T01:15:00+00:00"
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+          "attempt_id": "failure.attempt-6"
+        },
+        "spent_after": 8,
+        "next_action": "completed"
+      }
+    ],
+    "task_id": "failure",
+    "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+    "task_plan": {
+      "version": 3,
+      "kind": "alternative",
+      "variant": "lite",
+      "status": "completed",
+      "created_after_step": 3,
+      "trigger": {
+        "code": "injected_unavailable",
+        "model_reason": "素材支持 lite，需要确认费用和交付时间。",
+        "observation": {
+          "ok": false,
+          "code": "injected_unavailable",
+          "message": "本次调用未执行，费用为零。",
+          "step_id": "p2.generate_script",
+          "status": "failed",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 9,
+          "estimated_duration": 32,
+          "output": {},
+          "error": {
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。"
+          },
+          "reused": false,
+          "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+          "attempt_id": "failure.attempt-3"
+        },
+        "category": "tool_error"
+      },
+      "steps": [
+        {
+          "step_id": "p3.search_assets",
+          "tool": "search_assets",
+          "inputs": {
+            "topic": "校园迎新社团体验日"
+          },
+          "depends_on": [],
+          "input_refs": [],
+          "expected_output": "search_assets_result",
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+          "attempt_refs": [
+            "failure.attempt-1"
+          ],
+          "actual_cost": 1,
+          "actual_duration": 3,
+          "result": {
+            "ok": true,
+            "code": "assets_found",
+            "assets": [
+              {
+                "id": "C01",
+                "title": "校园跑道起跑的晨光",
+                "kind": "clip",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团",
+                  "跑步"
+                ],
+                "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+              },
+              {
+                "id": "C02",
+                "title": "社团摊位路线手绘卡",
+                "kind": "image",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团"
+                ],
+                "detail": "卡片用图标标出集合点、体验区与签到处。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "C01",
+              "C02"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "C01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              },
+              {
+                "asset_id": "C02",
+                "status": "success",
+                "cost": 0,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "studio",
+              "lite"
+            ],
+            "step_id": "p1.search_assets",
+            "status": "success",
+            "cost": 1,
+            "duration": 3,
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "output": {
+              "assets": [
+                {
+                  "id": "C01",
+                  "title": "校园跑道起跑的晨光",
+                  "kind": "clip",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团",
+                    "跑步"
+                  ],
+                  "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                },
+                {
+                  "id": "C02",
+                  "title": "社团摊位路线手绘卡",
+                  "kind": "image",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团"
+                  ],
+                  "detail": "卡片用图标标出集合点、体验区与签到处。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "C01",
+                "C02"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "C01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                },
+                {
+                  "asset_id": "C02",
+                  "status": "success",
+                  "cost": 0,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "studio",
+                "lite"
+              ]
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+            "attempt_id": "failure.attempt-1"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": true
+        },
+        {
+          "step_id": "p3.estimate_cost",
+          "tool": "estimate_cost",
+          "inputs": {
+            "variant": "lite"
+          },
+          "depends_on": [
+            "p3.search_assets"
+          ],
+          "input_refs": [
+            "p3.search_assets.output"
+          ],
+          "expected_output": "estimate_cost_result",
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "critical": true,
+          "idempotency_key": "e463c9fea89d73ce01eceef046bb817e4a8f2521f3f3722636cd9277d26b3390",
+          "attempt_refs": [
+            "failure.attempt-4"
+          ],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": {
+            "ok": true,
+            "code": "quote",
+            "variant": "lite",
+            "total": 8,
+            "remaining_units": 7,
+            "finish": "2030-05-01T01:15:00+00:00",
+            "budget_gap": 0,
+            "late_minutes": 0,
+            "feasible": true,
+            "step_id": "p3.estimate_cost",
+            "status": "success",
+            "cost": 0,
+            "duration": 0,
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "output": {
+              "variant": "lite",
+              "total": 8,
+              "remaining_units": 7,
+              "finish": "2030-05-01T01:15:00+00:00",
+              "budget_gap": 0,
+              "late_minutes": 0,
+              "feasible": true
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "e463c9fea89d73ce01eceef046bb817e4a8f2521f3f3722636cd9277d26b3390",
+            "attempt_id": "failure.attempt-4"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        },
+        {
+          "step_id": "p3.generate_script",
+          "tool": "generate_script",
+          "inputs": {
+            "variant": "lite"
+          },
+          "depends_on": [
+            "p3.search_assets",
+            "p3.estimate_cost"
+          ],
+          "input_refs": [
+            "p3.search_assets.output",
+            "p3.estimate_cost.output"
+          ],
+          "expected_output": "generate_script_result",
+          "estimated_cost": 5,
+          "estimated_duration": 9,
+          "critical": true,
+          "idempotency_key": "97d18bffa02d0fb209de7bb829840e1da7d9a215d9a23b3f8442f67bdc024bfd",
+          "attempt_refs": [
+            "failure.attempt-5"
+          ],
+          "actual_cost": 5,
+          "actual_duration": 9,
+          "result": {
+            "ok": true,
+            "code": "script_ready",
+            "variant": "lite",
+            "title": "校园迎新社团体验日｜一起参与",
+            "segments": 2,
+            "step_id": "p3.generate_script",
+            "status": "success",
+            "cost": 5,
+            "duration": 9,
+            "estimated_cost": 5,
+            "estimated_duration": 9,
+            "output": {
+              "variant": "lite",
+              "title": "校园迎新社团体验日｜一起参与",
+              "segments": 2
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "97d18bffa02d0fb209de7bb829840e1da7d9a215d9a23b3f8442f67bdc024bfd",
+            "attempt_id": "failure.attempt-5"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        },
+        {
+          "step_id": "p3.save_plan",
+          "tool": "save_plan",
+          "inputs": {},
+          "depends_on": [
+            "p3.estimate_cost",
+            "p3.generate_script"
+          ],
+          "input_refs": [
+            "p3.estimate_cost.output",
+            "p3.generate_script.output"
+          ],
+          "expected_output": "save_plan_result",
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+          "attempt_refs": [
+            "failure.attempt-6"
+          ],
+          "actual_cost": 2,
+          "actual_duration": 3,
+          "result": {
+            "ok": true,
+            "code": "saved",
+            "variant": "lite",
+            "total_cost": 8,
+            "id": "failure",
+            "finish": "2030-05-01T01:15:00+00:00",
+            "step_id": "p3.save_plan",
+            "status": "success",
+            "cost": 2,
+            "duration": 3,
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "output": {
+              "variant": "lite",
+              "total_cost": 8,
+              "id": "failure",
+              "finish": "2030-05-01T01:15:00+00:00"
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+            "attempt_id": "failure.attempt-6"
+          },
+          "status": "success",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        }
+      ],
+      "actual_cost": 8,
+      "estimated_total_cost": 8,
+      "estimated_finish": "2030-05-01T01:15:00+00:00"
+    },
+    "plan_versions": [
+      {
+        "version": 1,
+        "kind": "initial",
+        "variant": null,
+        "status": "abandoned",
+        "created_after_step": 0,
+        "trigger": {
+          "code": "task_received"
+        },
+        "steps": [
+          {
+            "step_id": "p1.search_assets",
+            "tool": "search_assets",
+            "inputs": {
+              "topic": "校园迎新社团体验日"
+            },
+            "depends_on": [],
+            "input_refs": [],
+            "expected_output": "search_assets_result",
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+            "attempt_refs": [
+              "failure.attempt-1"
+            ],
+            "actual_cost": 1,
+            "actual_duration": 3,
+            "result": {
+              "ok": true,
+              "code": "assets_found",
+              "assets": [
+                {
+                  "id": "C01",
+                  "title": "校园跑道起跑的晨光",
+                  "kind": "clip",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团",
+                    "跑步"
+                  ],
+                  "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                },
+                {
+                  "id": "C02",
+                  "title": "社团摊位路线手绘卡",
+                  "kind": "image",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团"
+                  ],
+                  "detail": "卡片用图标标出集合点、体验区与签到处。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "C01",
+                "C02"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "C01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                },
+                {
+                  "asset_id": "C02",
+                  "status": "success",
+                  "cost": 0,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "studio",
+                "lite"
+              ],
+              "step_id": "p1.search_assets",
+              "status": "success",
+              "cost": 1,
+              "duration": 3,
+              "estimated_cost": 1,
+              "estimated_duration": 3,
+              "output": {
+                "assets": [
+                  {
+                    "id": "C01",
+                    "title": "校园跑道起跑的晨光",
+                    "kind": "clip",
+                    "tags": [
+                      "校园",
+                      "迎新",
+                      "社团",
+                      "跑步"
+                    ],
+                    "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                  },
+                  {
+                    "id": "C02",
+                    "title": "社团摊位路线手绘卡",
+                    "kind": "image",
+                    "tags": [
+                      "校园",
+                      "迎新",
+                      "社团"
+                    ],
+                    "detail": "卡片用图标标出集合点、体验区与签到处。"
+                  }
+                ],
+                "retrieved_asset_ids": [
+                  "C01",
+                  "C02"
+                ],
+                "failed_asset_ids": [],
+                "item_results": [
+                  {
+                    "asset_id": "C01",
+                    "status": "success",
+                    "cost": 1,
+                    "error": null
+                  },
+                  {
+                    "asset_id": "C02",
+                    "status": "success",
+                    "cost": 0,
+                    "error": null
+                  }
+                ],
+                "available_variants": [
+                  "studio",
+                  "lite"
+                ]
+              },
+              "error": null,
+              "reused": false,
+              "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+              "attempt_id": "failure.attempt-1"
+            },
+            "status": "success",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          },
+          {
+            "step_id": "p1.estimate_cost",
+            "tool": "estimate_cost",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets"
+            ],
+            "input_refs": [
+              "p1.search_assets.output"
+            ],
+            "expected_output": "estimate_cost_result",
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "critical": true,
+            "idempotency_key": "1b837fb2486395be2363a7d7c8e2b9358262afaf52ba987c5cca1264a4d413a7",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "pending",
+            "blocked_by": [],
+            "reused": false
+          },
+          {
+            "step_id": "p1.generate_script",
+            "tool": "generate_script",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets",
+              "p1.estimate_cost"
+            ],
+            "input_refs": [
+              "p1.search_assets.output",
+              "p1.estimate_cost.output"
+            ],
+            "expected_output": "generate_script_result",
+            "estimated_cost": null,
+            "estimated_duration": null,
+            "critical": true,
+            "idempotency_key": "02bd32eb3fa243062013bbdfab4f6e3e0765f09e2cccca2876da20b5ac0fff90",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.estimate_cost"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.save_plan",
+            "tool": "save_plan",
+            "inputs": {},
+            "depends_on": [
+              "p1.estimate_cost",
+              "p1.generate_script"
+            ],
+            "input_refs": [
+              "p1.estimate_cost.output",
+              "p1.generate_script.output"
+            ],
+            "expected_output": "save_plan_result",
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.estimate_cost",
+              "p1.generate_script"
+            ],
+            "reused": false
+          }
+        ],
+        "actual_cost": 1,
+        "estimated_total_cost": null,
+        "estimated_finish": null
+      },
+      {
+        "version": 2,
+        "kind": "initial",
+        "variant": "studio",
+        "status": "abandoned",
+        "created_after_step": 1,
+        "trigger": {
+          "code": "assets_found",
+          "model_reason": "素材支持 studio，需要确认费用和交付时间。",
+          "observation": {
+            "ok": true,
+            "code": "assets_found",
+            "assets": [
+              {
+                "id": "C01",
+                "title": "校园跑道起跑的晨光",
+                "kind": "clip",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团",
+                  "跑步"
+                ],
+                "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+              },
+              {
+                "id": "C02",
+                "title": "社团摊位路线手绘卡",
+                "kind": "image",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团"
+                ],
+                "detail": "卡片用图标标出集合点、体验区与签到处。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "C01",
+              "C02"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "C01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              },
+              {
+                "asset_id": "C02",
+                "status": "success",
+                "cost": 0,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "studio",
+              "lite"
+            ],
+            "step_id": "p1.search_assets",
+            "status": "success",
+            "cost": 1,
+            "duration": 3,
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "output": {
+              "assets": [
+                {
+                  "id": "C01",
+                  "title": "校园跑道起跑的晨光",
+                  "kind": "clip",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团",
+                    "跑步"
+                  ],
+                  "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                },
+                {
+                  "id": "C02",
+                  "title": "社团摊位路线手绘卡",
+                  "kind": "image",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团"
+                  ],
+                  "detail": "卡片用图标标出集合点、体验区与签到处。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "C01",
+                "C02"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "C01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                },
+                {
+                  "asset_id": "C02",
+                  "status": "success",
+                  "cost": 0,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "studio",
+                "lite"
+              ]
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+            "attempt_id": "failure.attempt-1"
+          },
+          "category": "model_selection_or_resume"
+        },
+        "steps": [
+          {
+            "step_id": "p2.search_assets",
+            "tool": "search_assets",
+            "inputs": {
+              "topic": "校园迎新社团体验日"
+            },
+            "depends_on": [],
+            "input_refs": [],
+            "expected_output": "search_assets_result",
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+            "attempt_refs": [
+              "failure.attempt-1"
+            ],
+            "actual_cost": 1,
+            "actual_duration": 3,
+            "result": {
+              "ok": true,
+              "code": "assets_found",
+              "assets": [
+                {
+                  "id": "C01",
+                  "title": "校园跑道起跑的晨光",
+                  "kind": "clip",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团",
+                    "跑步"
+                  ],
+                  "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                },
+                {
+                  "id": "C02",
+                  "title": "社团摊位路线手绘卡",
+                  "kind": "image",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团"
+                  ],
+                  "detail": "卡片用图标标出集合点、体验区与签到处。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "C01",
+                "C02"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "C01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                },
+                {
+                  "asset_id": "C02",
+                  "status": "success",
+                  "cost": 0,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "studio",
+                "lite"
+              ],
+              "step_id": "p1.search_assets",
+              "status": "success",
+              "cost": 1,
+              "duration": 3,
+              "estimated_cost": 1,
+              "estimated_duration": 3,
+              "output": {
+                "assets": [
+                  {
+                    "id": "C01",
+                    "title": "校园跑道起跑的晨光",
+                    "kind": "clip",
+                    "tags": [
+                      "校园",
+                      "迎新",
+                      "社团",
+                      "跑步"
+                    ],
+                    "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                  },
+                  {
+                    "id": "C02",
+                    "title": "社团摊位路线手绘卡",
+                    "kind": "image",
+                    "tags": [
+                      "校园",
+                      "迎新",
+                      "社团"
+                    ],
+                    "detail": "卡片用图标标出集合点、体验区与签到处。"
+                  }
+                ],
+                "retrieved_asset_ids": [
+                  "C01",
+                  "C02"
+                ],
+                "failed_asset_ids": [],
+                "item_results": [
+                  {
+                    "asset_id": "C01",
+                    "status": "success",
+                    "cost": 1,
+                    "error": null
+                  },
+                  {
+                    "asset_id": "C02",
+                    "status": "success",
+                    "cost": 0,
+                    "error": null
+                  }
+                ],
+                "available_variants": [
+                  "studio",
+                  "lite"
+                ]
+              },
+              "error": null,
+              "reused": false,
+              "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+              "attempt_id": "failure.attempt-1"
+            },
+            "status": "success",
+            "blocked_by": [],
+            "reused": true
+          },
+          {
+            "step_id": "p2.estimate_cost",
+            "tool": "estimate_cost",
+            "inputs": {
+              "variant": "studio"
+            },
+            "depends_on": [
+              "p2.search_assets"
+            ],
+            "input_refs": [
+              "p2.search_assets.output"
+            ],
+            "expected_output": "estimate_cost_result",
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "critical": true,
+            "idempotency_key": "9fd9efa92cdf1634a558f5b97b09a8c583fed8cbd7b1a63a8c1abfd377f68f3f",
+            "attempt_refs": [
+              "failure.attempt-2"
+            ],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": {
+              "ok": true,
+              "code": "quote",
+              "variant": "studio",
+              "total": 12,
+              "remaining_units": 11,
+              "finish": "2030-05-01T01:38:00+00:00",
+              "budget_gap": 0,
+              "late_minutes": 0,
+              "feasible": true,
+              "step_id": "p2.estimate_cost",
+              "status": "success",
+              "cost": 0,
+              "duration": 0,
+              "estimated_cost": 0,
+              "estimated_duration": 0,
+              "output": {
+                "variant": "studio",
+                "total": 12,
+                "remaining_units": 11,
+                "finish": "2030-05-01T01:38:00+00:00",
+                "budget_gap": 0,
+                "late_minutes": 0,
+                "feasible": true
+              },
+              "error": null,
+              "reused": false,
+              "idempotency_key": "9fd9efa92cdf1634a558f5b97b09a8c583fed8cbd7b1a63a8c1abfd377f68f3f",
+              "attempt_id": "failure.attempt-2"
+            },
+            "status": "success",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          },
+          {
+            "step_id": "p2.generate_script",
+            "tool": "generate_script",
+            "inputs": {
+              "variant": "studio"
+            },
+            "depends_on": [
+              "p2.search_assets",
+              "p2.estimate_cost"
+            ],
+            "input_refs": [
+              "p2.search_assets.output",
+              "p2.estimate_cost.output"
+            ],
+            "expected_output": "generate_script_result",
+            "estimated_cost": 9,
+            "estimated_duration": 32,
+            "critical": true,
+            "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+            "attempt_refs": [
+              "failure.attempt-3"
+            ],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": {
+              "ok": false,
+              "code": "injected_unavailable",
+              "message": "本次调用未执行，费用为零。",
+              "step_id": "p2.generate_script",
+              "status": "failed",
+              "cost": 0,
+              "duration": 0,
+              "estimated_cost": 9,
+              "estimated_duration": 32,
+              "output": {},
+              "error": {
+                "code": "injected_unavailable",
+                "message": "本次调用未执行，费用为零。"
+              },
+              "reused": false,
+              "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+              "attempt_id": "failure.attempt-3"
+            },
+            "status": "failed",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          },
+          {
+            "step_id": "p2.save_plan",
+            "tool": "save_plan",
+            "inputs": {},
+            "depends_on": [
+              "p2.estimate_cost",
+              "p2.generate_script"
+            ],
+            "input_refs": [
+              "p2.estimate_cost.output",
+              "p2.generate_script.output"
+            ],
+            "expected_output": "save_plan_result",
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p2.generate_script"
+            ],
+            "reused": false
+          }
+        ],
+        "actual_cost": 1,
+        "estimated_total_cost": 12,
+        "estimated_finish": "2030-05-01T01:38:00+00:00"
+      },
+      {
+        "version": 3,
+        "kind": "alternative",
+        "variant": "lite",
+        "status": "completed",
+        "created_after_step": 3,
+        "trigger": {
+          "code": "injected_unavailable",
+          "model_reason": "素材支持 lite，需要确认费用和交付时间。",
+          "observation": {
+            "ok": false,
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。",
+            "step_id": "p2.generate_script",
+            "status": "failed",
+            "cost": 0,
+            "duration": 0,
+            "estimated_cost": 9,
+            "estimated_duration": 32,
+            "output": {},
+            "error": {
+              "code": "injected_unavailable",
+              "message": "本次调用未执行，费用为零。"
+            },
+            "reused": false,
+            "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+            "attempt_id": "failure.attempt-3"
+          },
+          "category": "tool_error"
+        },
+        "steps": [
+          {
+            "step_id": "p3.search_assets",
+            "tool": "search_assets",
+            "inputs": {
+              "topic": "校园迎新社团体验日"
+            },
+            "depends_on": [],
+            "input_refs": [],
+            "expected_output": "search_assets_result",
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+            "attempt_refs": [
+              "failure.attempt-1"
+            ],
+            "actual_cost": 1,
+            "actual_duration": 3,
+            "result": {
+              "ok": true,
+              "code": "assets_found",
+              "assets": [
+                {
+                  "id": "C01",
+                  "title": "校园跑道起跑的晨光",
+                  "kind": "clip",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团",
+                    "跑步"
+                  ],
+                  "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                },
+                {
+                  "id": "C02",
+                  "title": "社团摊位路线手绘卡",
+                  "kind": "image",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团"
+                  ],
+                  "detail": "卡片用图标标出集合点、体验区与签到处。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "C01",
+                "C02"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "C01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                },
+                {
+                  "asset_id": "C02",
+                  "status": "success",
+                  "cost": 0,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "studio",
+                "lite"
+              ],
+              "step_id": "p1.search_assets",
+              "status": "success",
+              "cost": 1,
+              "duration": 3,
+              "estimated_cost": 1,
+              "estimated_duration": 3,
+              "output": {
+                "assets": [
+                  {
+                    "id": "C01",
+                    "title": "校园跑道起跑的晨光",
+                    "kind": "clip",
+                    "tags": [
+                      "校园",
+                      "迎新",
+                      "社团",
+                      "跑步"
+                    ],
+                    "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                  },
+                  {
+                    "id": "C02",
+                    "title": "社团摊位路线手绘卡",
+                    "kind": "image",
+                    "tags": [
+                      "校园",
+                      "迎新",
+                      "社团"
+                    ],
+                    "detail": "卡片用图标标出集合点、体验区与签到处。"
+                  }
+                ],
+                "retrieved_asset_ids": [
+                  "C01",
+                  "C02"
+                ],
+                "failed_asset_ids": [],
+                "item_results": [
+                  {
+                    "asset_id": "C01",
+                    "status": "success",
+                    "cost": 1,
+                    "error": null
+                  },
+                  {
+                    "asset_id": "C02",
+                    "status": "success",
+                    "cost": 0,
+                    "error": null
+                  }
+                ],
+                "available_variants": [
+                  "studio",
+                  "lite"
+                ]
+              },
+              "error": null,
+              "reused": false,
+              "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+              "attempt_id": "failure.attempt-1"
+            },
+            "status": "success",
+            "blocked_by": [],
+            "reused": true
+          },
+          {
+            "step_id": "p3.estimate_cost",
+            "tool": "estimate_cost",
+            "inputs": {
+              "variant": "lite"
+            },
+            "depends_on": [
+              "p3.search_assets"
+            ],
+            "input_refs": [
+              "p3.search_assets.output"
+            ],
+            "expected_output": "estimate_cost_result",
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "critical": true,
+            "idempotency_key": "e463c9fea89d73ce01eceef046bb817e4a8f2521f3f3722636cd9277d26b3390",
+            "attempt_refs": [
+              "failure.attempt-4"
+            ],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": {
+              "ok": true,
+              "code": "quote",
+              "variant": "lite",
+              "total": 8,
+              "remaining_units": 7,
+              "finish": "2030-05-01T01:15:00+00:00",
+              "budget_gap": 0,
+              "late_minutes": 0,
+              "feasible": true,
+              "step_id": "p3.estimate_cost",
+              "status": "success",
+              "cost": 0,
+              "duration": 0,
+              "estimated_cost": 0,
+              "estimated_duration": 0,
+              "output": {
+                "variant": "lite",
+                "total": 8,
+                "remaining_units": 7,
+                "finish": "2030-05-01T01:15:00+00:00",
+                "budget_gap": 0,
+                "late_minutes": 0,
+                "feasible": true
+              },
+              "error": null,
+              "reused": false,
+              "idempotency_key": "e463c9fea89d73ce01eceef046bb817e4a8f2521f3f3722636cd9277d26b3390",
+              "attempt_id": "failure.attempt-4"
+            },
+            "status": "success",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          },
+          {
+            "step_id": "p3.generate_script",
+            "tool": "generate_script",
+            "inputs": {
+              "variant": "lite"
+            },
+            "depends_on": [
+              "p3.search_assets",
+              "p3.estimate_cost"
+            ],
+            "input_refs": [
+              "p3.search_assets.output",
+              "p3.estimate_cost.output"
+            ],
+            "expected_output": "generate_script_result",
+            "estimated_cost": 5,
+            "estimated_duration": 9,
+            "critical": true,
+            "idempotency_key": "97d18bffa02d0fb209de7bb829840e1da7d9a215d9a23b3f8442f67bdc024bfd",
+            "attempt_refs": [
+              "failure.attempt-5"
+            ],
+            "actual_cost": 5,
+            "actual_duration": 9,
+            "result": {
+              "ok": true,
+              "code": "script_ready",
+              "variant": "lite",
+              "title": "校园迎新社团体验日｜一起参与",
+              "segments": 2,
+              "step_id": "p3.generate_script",
+              "status": "success",
+              "cost": 5,
+              "duration": 9,
+              "estimated_cost": 5,
+              "estimated_duration": 9,
+              "output": {
+                "variant": "lite",
+                "title": "校园迎新社团体验日｜一起参与",
+                "segments": 2
+              },
+              "error": null,
+              "reused": false,
+              "idempotency_key": "97d18bffa02d0fb209de7bb829840e1da7d9a215d9a23b3f8442f67bdc024bfd",
+              "attempt_id": "failure.attempt-5"
+            },
+            "status": "success",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          },
+          {
+            "step_id": "p3.save_plan",
+            "tool": "save_plan",
+            "inputs": {},
+            "depends_on": [
+              "p3.estimate_cost",
+              "p3.generate_script"
+            ],
+            "input_refs": [
+              "p3.estimate_cost.output",
+              "p3.generate_script.output"
+            ],
+            "expected_output": "save_plan_result",
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+            "attempt_refs": [
+              "failure.attempt-6"
+            ],
+            "actual_cost": 2,
+            "actual_duration": 3,
+            "result": {
+              "ok": true,
+              "code": "saved",
+              "variant": "lite",
+              "total_cost": 8,
+              "id": "failure",
+              "finish": "2030-05-01T01:15:00+00:00",
+              "step_id": "p3.save_plan",
+              "status": "success",
+              "cost": 2,
+              "duration": 3,
+              "estimated_cost": 2,
+              "estimated_duration": 3,
+              "output": {
+                "variant": "lite",
+                "total_cost": 8,
+                "id": "failure",
+                "finish": "2030-05-01T01:15:00+00:00"
+              },
+              "error": null,
+              "reused": false,
+              "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+              "attempt_id": "failure.attempt-6"
+            },
+            "status": "success",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          }
+        ],
+        "actual_cost": 8,
+        "estimated_total_cost": 8,
+        "estimated_finish": "2030-05-01T01:15:00+00:00"
+      }
+    ],
+    "replanning": [
+      {
+        "from_version": 1,
+        "to_version": 2,
+        "trigger": {
+          "code": "assets_found",
+          "model_reason": "素材支持 studio，需要确认费用和交付时间。",
+          "observation": {
+            "ok": true,
+            "code": "assets_found",
+            "assets": [
+              {
+                "id": "C01",
+                "title": "校园跑道起跑的晨光",
+                "kind": "clip",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团",
+                  "跑步"
+                ],
+                "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+              },
+              {
+                "id": "C02",
+                "title": "社团摊位路线手绘卡",
+                "kind": "image",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团"
+                ],
+                "detail": "卡片用图标标出集合点、体验区与签到处。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "C01",
+              "C02"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "C01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              },
+              {
+                "asset_id": "C02",
+                "status": "success",
+                "cost": 0,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "studio",
+              "lite"
+            ],
+            "step_id": "p1.search_assets",
+            "status": "success",
+            "cost": 1,
+            "duration": 3,
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "output": {
+              "assets": [
+                {
+                  "id": "C01",
+                  "title": "校园跑道起跑的晨光",
+                  "kind": "clip",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团",
+                    "跑步"
+                  ],
+                  "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+                },
+                {
+                  "id": "C02",
+                  "title": "社团摊位路线手绘卡",
+                  "kind": "image",
+                  "tags": [
+                    "校园",
+                    "迎新",
+                    "社团"
+                  ],
+                  "detail": "卡片用图标标出集合点、体验区与签到处。"
+                }
+              ],
+              "retrieved_asset_ids": [
+                "C01",
+                "C02"
+              ],
+              "failed_asset_ids": [],
+              "item_results": [
+                {
+                  "asset_id": "C01",
+                  "status": "success",
+                  "cost": 1,
+                  "error": null
+                },
+                {
+                  "asset_id": "C02",
+                  "status": "success",
+                  "cost": 0,
+                  "error": null
+                }
+              ],
+              "available_variants": [
+                "studio",
+                "lite"
+              ]
+            },
+            "error": null,
+            "reused": false,
+            "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+            "attempt_id": "failure.attempt-1"
+          },
+          "category": "model_selection_or_resume"
+        },
+        "changes": {
+          "variant": {
+            "old": null,
+            "new": "studio"
+          },
+          "reused_steps": [
+            "search_assets"
+          ],
+          "retry_steps": []
+        }
+      },
+      {
+        "from_version": 2,
+        "to_version": 3,
+        "trigger": {
+          "code": "injected_unavailable",
+          "model_reason": "素材支持 lite，需要确认费用和交付时间。",
+          "observation": {
+            "ok": false,
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。",
+            "step_id": "p2.generate_script",
+            "status": "failed",
+            "cost": 0,
+            "duration": 0,
+            "estimated_cost": 9,
+            "estimated_duration": 32,
+            "output": {},
+            "error": {
+              "code": "injected_unavailable",
+              "message": "本次调用未执行，费用为零。"
+            },
+            "reused": false,
+            "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+            "attempt_id": "failure.attempt-3"
+          },
+          "category": "tool_error"
+        },
+        "changes": {
+          "variant": {
+            "old": "studio",
+            "new": "lite"
+          },
+          "reused_steps": [
+            "search_assets"
+          ],
+          "retry_steps": []
+        }
+      }
+    ],
+    "attempts": [
+      {
+        "attempt_id": "failure.attempt-1",
+        "plan_version": 1,
+        "step_id": "p1.search_assets",
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "session": 1,
+        "action": "search_assets",
+        "args": {},
+        "transitions": [
+          "pending",
+          "running",
+          "success"
+        ],
+        "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+        "result": {
+          "ok": true,
+          "code": "assets_found",
+          "assets": [
+            {
+              "id": "C01",
+              "title": "校园跑道起跑的晨光",
+              "kind": "clip",
+              "tags": [
+                "校园",
+                "迎新",
+                "社团",
+                "跑步"
+              ],
+              "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+            },
+            {
+              "id": "C02",
+              "title": "社团摊位路线手绘卡",
+              "kind": "image",
+              "tags": [
+                "校园",
+                "迎新",
+                "社团"
+              ],
+              "detail": "卡片用图标标出集合点、体验区与签到处。"
+            }
+          ],
+          "retrieved_asset_ids": [
+            "C01",
+            "C02"
+          ],
+          "failed_asset_ids": [],
+          "item_results": [
+            {
+              "asset_id": "C01",
+              "status": "success",
+              "cost": 1,
+              "error": null
+            },
+            {
+              "asset_id": "C02",
+              "status": "success",
+              "cost": 0,
+              "error": null
+            }
+          ],
+          "available_variants": [
+            "studio",
+            "lite"
+          ],
+          "step_id": "p1.search_assets",
+          "status": "success",
+          "cost": 1,
+          "duration": 3,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {
+            "assets": [
+              {
+                "id": "C01",
+                "title": "校园跑道起跑的晨光",
+                "kind": "clip",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团",
+                  "跑步"
+                ],
+                "detail": "志愿者从起跑线出发，画面预留活动标题区。"
+              },
+              {
+                "id": "C02",
+                "title": "社团摊位路线手绘卡",
+                "kind": "image",
+                "tags": [
+                  "校园",
+                  "迎新",
+                  "社团"
+                ],
+                "detail": "卡片用图标标出集合点、体验区与签到处。"
+              }
+            ],
+            "retrieved_asset_ids": [
+              "C01",
+              "C02"
+            ],
+            "failed_asset_ids": [],
+            "item_results": [
+              {
+                "asset_id": "C01",
+                "status": "success",
+                "cost": 1,
+                "error": null
+              },
+              {
+                "asset_id": "C02",
+                "status": "success",
+                "cost": 0,
+                "error": null
+              }
+            ],
+            "available_variants": [
+              "studio",
+              "lite"
+            ]
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "b46b5676dad6952d44535f9f59d099abb7e88752b12837111e3d4d42a389e7d0",
+          "attempt_id": "failure.attempt-1"
+        }
+      },
+      {
+        "attempt_id": "failure.attempt-2",
+        "plan_version": 2,
+        "step_id": "p2.estimate_cost",
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "session": 1,
+        "action": "estimate_cost",
+        "args": {
+          "variant": "studio"
+        },
+        "transitions": [
+          "pending",
+          "running",
+          "success"
+        ],
+        "idempotency_key": "9fd9efa92cdf1634a558f5b97b09a8c583fed8cbd7b1a63a8c1abfd377f68f3f",
+        "result": {
+          "ok": true,
+          "code": "quote",
+          "variant": "studio",
+          "total": 12,
+          "remaining_units": 11,
+          "finish": "2030-05-01T01:38:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true,
+          "step_id": "p2.estimate_cost",
+          "status": "success",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "output": {
+            "variant": "studio",
+            "total": 12,
+            "remaining_units": 11,
+            "finish": "2030-05-01T01:38:00+00:00",
+            "budget_gap": 0,
+            "late_minutes": 0,
+            "feasible": true
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "9fd9efa92cdf1634a558f5b97b09a8c583fed8cbd7b1a63a8c1abfd377f68f3f",
+          "attempt_id": "failure.attempt-2"
+        }
+      },
+      {
+        "attempt_id": "failure.attempt-3",
+        "plan_version": 2,
+        "step_id": "p2.generate_script",
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "session": 1,
+        "action": "generate_script",
+        "args": {
+          "variant": "studio"
+        },
+        "transitions": [
+          "pending",
+          "running",
+          "failed"
+        ],
+        "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+        "result": {
+          "ok": false,
+          "code": "injected_unavailable",
+          "message": "本次调用未执行，费用为零。",
+          "step_id": "p2.generate_script",
+          "status": "failed",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 9,
+          "estimated_duration": 32,
+          "output": {},
+          "error": {
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。"
+          },
+          "reused": false,
+          "idempotency_key": "51d92ccab6a254042ac0f68a37eb8fc040a1ddeae563536d265539f2df7d1e93",
+          "attempt_id": "failure.attempt-3"
+        }
+      },
+      {
+        "attempt_id": "failure.attempt-4",
+        "plan_version": 3,
+        "step_id": "p3.estimate_cost",
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "session": 1,
+        "action": "estimate_cost",
+        "args": {
+          "variant": "lite"
+        },
+        "transitions": [
+          "pending",
+          "running",
+          "success"
+        ],
+        "idempotency_key": "e463c9fea89d73ce01eceef046bb817e4a8f2521f3f3722636cd9277d26b3390",
+        "result": {
+          "ok": true,
+          "code": "quote",
+          "variant": "lite",
+          "total": 8,
+          "remaining_units": 7,
+          "finish": "2030-05-01T01:15:00+00:00",
+          "budget_gap": 0,
+          "late_minutes": 0,
+          "feasible": true,
+          "step_id": "p3.estimate_cost",
+          "status": "success",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "output": {
+            "variant": "lite",
+            "total": 8,
+            "remaining_units": 7,
+            "finish": "2030-05-01T01:15:00+00:00",
+            "budget_gap": 0,
+            "late_minutes": 0,
+            "feasible": true
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "e463c9fea89d73ce01eceef046bb817e4a8f2521f3f3722636cd9277d26b3390",
+          "attempt_id": "failure.attempt-4"
+        }
+      },
+      {
+        "attempt_id": "failure.attempt-5",
+        "plan_version": 3,
+        "step_id": "p3.generate_script",
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "session": 1,
+        "action": "generate_script",
+        "args": {
+          "variant": "lite"
+        },
+        "transitions": [
+          "pending",
+          "running",
+          "success"
+        ],
+        "idempotency_key": "97d18bffa02d0fb209de7bb829840e1da7d9a215d9a23b3f8442f67bdc024bfd",
+        "result": {
+          "ok": true,
+          "code": "script_ready",
+          "variant": "lite",
+          "title": "校园迎新社团体验日｜一起参与",
+          "segments": 2,
+          "step_id": "p3.generate_script",
+          "status": "success",
+          "cost": 5,
+          "duration": 9,
+          "estimated_cost": 5,
+          "estimated_duration": 9,
+          "output": {
+            "variant": "lite",
+            "title": "校园迎新社团体验日｜一起参与",
+            "segments": 2
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "97d18bffa02d0fb209de7bb829840e1da7d9a215d9a23b3f8442f67bdc024bfd",
+          "attempt_id": "failure.attempt-5"
+        }
+      },
+      {
+        "attempt_id": "failure.attempt-6",
+        "plan_version": 3,
+        "step_id": "p3.save_plan",
+        "run_id": "f1cb4e462a774efdb91900582c7e6aff",
+        "session": 1,
+        "action": "save_plan",
+        "args": {},
+        "transitions": [
+          "pending",
+          "running",
+          "success"
+        ],
+        "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+        "result": {
+          "ok": true,
+          "code": "saved",
+          "variant": "lite",
+          "total_cost": 8,
+          "id": "failure",
+          "finish": "2030-05-01T01:15:00+00:00",
+          "step_id": "p3.save_plan",
+          "status": "success",
+          "cost": 2,
+          "duration": 3,
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "output": {
+            "variant": "lite",
+            "total_cost": 8,
+            "id": "failure",
+            "finish": "2030-05-01T01:15:00+00:00"
+          },
+          "error": null,
+          "reused": false,
+          "idempotency_key": "c4d8fbfb3110a4365e2fa68d23d2a2ef8183c1117be13985f04c9c8bac48d9fb",
+          "attempt_id": "failure.attempt-6"
+        }
+      }
+    ],
+    "snapshots": [
+      {
+        "after_step": 1,
+        "session": 1,
+        "plan_version": 1,
+        "status": "running",
+        "spent": 1,
+        "asset_ids": [
+          "C01",
+          "C02"
+        ],
+        "has_script": false,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "success",
+          "estimate_cost": "pending",
+          "generate_script": "blocked",
+          "save_plan": "blocked"
+        }
+      },
+      {
+        "after_step": 2,
+        "session": 1,
+        "plan_version": 2,
+        "status": "running",
+        "spent": 1,
+        "asset_ids": [
+          "C01",
+          "C02"
+        ],
+        "has_script": false,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "success",
+          "estimate_cost": "success",
+          "generate_script": "pending",
+          "save_plan": "blocked"
+        }
+      },
+      {
+        "after_step": 3,
+        "session": 1,
+        "plan_version": 2,
+        "status": "running",
+        "spent": 1,
+        "asset_ids": [
+          "C01",
+          "C02"
+        ],
+        "has_script": false,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "success",
+          "estimate_cost": "success",
+          "generate_script": "failed",
+          "save_plan": "blocked"
+        }
+      },
+      {
+        "after_step": 4,
+        "session": 1,
+        "plan_version": 3,
+        "status": "running",
+        "spent": 1,
+        "asset_ids": [
+          "C01",
+          "C02"
+        ],
+        "has_script": false,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "success",
+          "estimate_cost": "success",
+          "generate_script": "pending",
+          "save_plan": "blocked"
+        }
+      },
+      {
+        "after_step": 5,
+        "session": 1,
+        "plan_version": 3,
+        "status": "running",
+        "spent": 6,
+        "asset_ids": [
+          "C01",
+          "C02"
+        ],
+        "has_script": true,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "success",
+          "estimate_cost": "success",
+          "generate_script": "success",
+          "save_plan": "pending"
+        }
+      },
+      {
+        "after_step": 6,
+        "session": 1,
+        "plan_version": 3,
+        "status": "completed",
+        "spent": 8,
+        "asset_ids": [
+          "C01",
+          "C02"
+        ],
+        "has_script": true,
+        "has_saved_plan": true,
+        "steps": {
+          "search_assets": "success",
+          "estimate_cost": "success",
+          "generate_script": "success",
+          "save_plan": "success"
+        }
+      }
+    ],
+    "unfinished": null
+  }
+}

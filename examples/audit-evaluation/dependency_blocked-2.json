@@ -1,0 +1,447 @@
+{
+  "case": "dependency_blocked",
+  "repeat": 2,
+  "model_mode": "mock",
+  "model": "deterministic-mock",
+  "elapsed_seconds": 0.5006,
+  "exit_code": 2,
+  "expected": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "step_limit",
+    "observations": [
+      {
+        "code": "injected_unavailable",
+        "status": "failed"
+      }
+    ]
+  },
+  "expectation_matched": true,
+  "assessment": {
+    "checks": {
+      "ledger_total": true,
+      "nonnegative_charges": true,
+      "budget_respected": true,
+      "trace_sequence": true,
+      "completion_has_saved_plan": true,
+      "incomplete_has_reason": true,
+      "plan_is_dag": true,
+      "attempt_costs_match_ledger": true,
+      "failed_attempts_not_charged": true,
+      "attempt_ids_unique": true,
+      "step_result_references_valid": true
+    },
+    "all_checks_passed": true
+  },
+  "result": {
+    "campaign_id": "dependency_blocked",
+    "status": "incomplete",
+    "reason": {
+      "code": "step_limit",
+      "message": "本轮 1 步用尽，可用 --resume 续跑。"
+    },
+    "invocation": "executed",
+    "new_steps": 1,
+    "revision": 1,
+    "timeline": "2030-05-01T01:00:00+00:00",
+    "steps": {
+      "search_assets": "failed",
+      "estimate_cost": "pending",
+      "generate_script": "pending",
+      "save_plan": "pending"
+    },
+    "assets": [],
+    "asset_failures": [],
+    "quotes": {},
+    "script": null,
+    "charges": [],
+    "total_cost": 0,
+    "saved_plan": null,
+    "trace": [
+      {
+        "step": 1,
+        "session": 1,
+        "run_id": "122f0898661849ceb7f39555a836ed5b",
+        "model": "mock",
+        "action": "search_assets",
+        "args": {},
+        "reason": "按主题查询合成素材。",
+        "observation": {
+          "ok": false,
+          "code": "injected_unavailable",
+          "message": "本次调用未执行，费用为零。",
+          "step_id": "p1.search_assets",
+          "status": "failed",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {},
+          "error": {
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。"
+          },
+          "reused": false,
+          "idempotency_key": "aaefed8d0e54fa023ff95be4c155b04eb291edc35b1937662b44112b5f3eb31b",
+          "attempt_id": "dependency_blocked.attempt-1"
+        },
+        "spent_after": 0,
+        "next_action": "incomplete"
+      }
+    ],
+    "task_id": "dependency_blocked",
+    "run_id": "122f0898661849ceb7f39555a836ed5b",
+    "task_plan": {
+      "version": 1,
+      "kind": "initial",
+      "variant": null,
+      "status": "incomplete",
+      "created_after_step": 0,
+      "trigger": {
+        "code": "task_received"
+      },
+      "steps": [
+        {
+          "step_id": "p1.search_assets",
+          "tool": "search_assets",
+          "inputs": {
+            "topic": "校园迎新社团体验日"
+          },
+          "depends_on": [],
+          "input_refs": [],
+          "expected_output": "search_assets_result",
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "aaefed8d0e54fa023ff95be4c155b04eb291edc35b1937662b44112b5f3eb31b",
+          "attempt_refs": [
+            "dependency_blocked.attempt-1"
+          ],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": {
+            "ok": false,
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。",
+            "step_id": "p1.search_assets",
+            "status": "failed",
+            "cost": 0,
+            "duration": 0,
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "output": {},
+            "error": {
+              "code": "injected_unavailable",
+              "message": "本次调用未执行，费用为零。"
+            },
+            "reused": false,
+            "idempotency_key": "aaefed8d0e54fa023ff95be4c155b04eb291edc35b1937662b44112b5f3eb31b",
+            "attempt_id": "dependency_blocked.attempt-1"
+          },
+          "status": "failed",
+          "blocked_by": [],
+          "reused": false,
+          "prior_status": "pending"
+        },
+        {
+          "step_id": "p1.estimate_cost",
+          "tool": "estimate_cost",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets"
+          ],
+          "input_refs": [
+            "p1.search_assets.output"
+          ],
+          "expected_output": "estimate_cost_result",
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "critical": true,
+          "idempotency_key": "3cfe896b61e5197efc501c5fc97d134f6ab77e9fe472b6a56ad13adecee4b847",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.search_assets"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.generate_script",
+          "tool": "generate_script",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets",
+            "p1.estimate_cost"
+          ],
+          "input_refs": [
+            "p1.search_assets.output",
+            "p1.estimate_cost.output"
+          ],
+          "expected_output": "generate_script_result",
+          "estimated_cost": null,
+          "estimated_duration": null,
+          "critical": true,
+          "idempotency_key": "9a1709b46ffcf674ce8fe6d65ab85c0206a8692f2f7d590c5e6817b950cccdd9",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.search_assets",
+            "p1.estimate_cost"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.save_plan",
+          "tool": "save_plan",
+          "inputs": {},
+          "depends_on": [
+            "p1.estimate_cost",
+            "p1.generate_script"
+          ],
+          "input_refs": [
+            "p1.estimate_cost.output",
+            "p1.generate_script.output"
+          ],
+          "expected_output": "save_plan_result",
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "4d2d166333947c543e082ef138628cf0b3efd68b08a1ea8658d86a15c9ba344a",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "p1.estimate_cost",
+            "p1.generate_script"
+          ],
+          "reused": false
+        }
+      ],
+      "actual_cost": 0,
+      "estimated_total_cost": null,
+      "estimated_finish": null
+    },
+    "plan_versions": [
+      {
+        "version": 1,
+        "kind": "initial",
+        "variant": null,
+        "status": "incomplete",
+        "created_after_step": 0,
+        "trigger": {
+          "code": "task_received"
+        },
+        "steps": [
+          {
+            "step_id": "p1.search_assets",
+            "tool": "search_assets",
+            "inputs": {
+              "topic": "校园迎新社团体验日"
+            },
+            "depends_on": [],
+            "input_refs": [],
+            "expected_output": "search_assets_result",
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "aaefed8d0e54fa023ff95be4c155b04eb291edc35b1937662b44112b5f3eb31b",
+            "attempt_refs": [
+              "dependency_blocked.attempt-1"
+            ],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": {
+              "ok": false,
+              "code": "injected_unavailable",
+              "message": "本次调用未执行，费用为零。",
+              "step_id": "p1.search_assets",
+              "status": "failed",
+              "cost": 0,
+              "duration": 0,
+              "estimated_cost": 1,
+              "estimated_duration": 3,
+              "output": {},
+              "error": {
+                "code": "injected_unavailable",
+                "message": "本次调用未执行，费用为零。"
+              },
+              "reused": false,
+              "idempotency_key": "aaefed8d0e54fa023ff95be4c155b04eb291edc35b1937662b44112b5f3eb31b",
+              "attempt_id": "dependency_blocked.attempt-1"
+            },
+            "status": "failed",
+            "blocked_by": [],
+            "reused": false,
+            "prior_status": "pending"
+          },
+          {
+            "step_id": "p1.estimate_cost",
+            "tool": "estimate_cost",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets"
+            ],
+            "input_refs": [
+              "p1.search_assets.output"
+            ],
+            "expected_output": "estimate_cost_result",
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "critical": true,
+            "idempotency_key": "3cfe896b61e5197efc501c5fc97d134f6ab77e9fe472b6a56ad13adecee4b847",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.search_assets"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.generate_script",
+            "tool": "generate_script",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets",
+              "p1.estimate_cost"
+            ],
+            "input_refs": [
+              "p1.search_assets.output",
+              "p1.estimate_cost.output"
+            ],
+            "expected_output": "generate_script_result",
+            "estimated_cost": null,
+            "estimated_duration": null,
+            "critical": true,
+            "idempotency_key": "9a1709b46ffcf674ce8fe6d65ab85c0206a8692f2f7d590c5e6817b950cccdd9",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.search_assets",
+              "p1.estimate_cost"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.save_plan",
+            "tool": "save_plan",
+            "inputs": {},
+            "depends_on": [
+              "p1.estimate_cost",
+              "p1.generate_script"
+            ],
+            "input_refs": [
+              "p1.estimate_cost.output",
+              "p1.generate_script.output"
+            ],
+            "expected_output": "save_plan_result",
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "4d2d166333947c543e082ef138628cf0b3efd68b08a1ea8658d86a15c9ba344a",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "p1.estimate_cost",
+              "p1.generate_script"
+            ],
+            "reused": false
+          }
+        ],
+        "actual_cost": 0,
+        "estimated_total_cost": null,
+        "estimated_finish": null
+      }
+    ],
+    "replanning": [],
+    "attempts": [
+      {
+        "attempt_id": "dependency_blocked.attempt-1",
+        "plan_version": 1,
+        "step_id": "p1.search_assets",
+        "run_id": "122f0898661849ceb7f39555a836ed5b",
+        "session": 1,
+        "action": "search_assets",
+        "args": {},
+        "transitions": [
+          "pending",
+          "running",
+          "failed"
+        ],
+        "idempotency_key": "aaefed8d0e54fa023ff95be4c155b04eb291edc35b1937662b44112b5f3eb31b",
+        "result": {
+          "ok": false,
+          "code": "injected_unavailable",
+          "message": "本次调用未执行，费用为零。",
+          "step_id": "p1.search_assets",
+          "status": "failed",
+          "cost": 0,
+          "duration": 0,
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "output": {},
+          "error": {
+            "code": "injected_unavailable",
+            "message": "本次调用未执行，费用为零。"
+          },
+          "reused": false,
+          "idempotency_key": "aaefed8d0e54fa023ff95be4c155b04eb291edc35b1937662b44112b5f3eb31b",
+          "attempt_id": "dependency_blocked.attempt-1"
+        }
+      }
+    ],
+    "snapshots": [
+      {
+        "after_step": 1,
+        "session": 1,
+        "plan_version": 1,
+        "status": "incomplete",
+        "spent": 0,
+        "asset_ids": [],
+        "has_script": false,
+        "has_saved_plan": false,
+        "steps": {
+          "search_assets": "failed",
+          "estimate_cost": "blocked",
+          "generate_script": "blocked",
+          "save_plan": "blocked"
+        }
+      }
+    ],
+    "unfinished": {
+      "stopped_at": "search_assets",
+      "budget_gap": 0,
+      "late_minutes": 0,
+      "missing_fields": [],
+      "missing_assets": [],
+      "retained_steps": [],
+      "next_steps": [
+        "检查失败记录；可恢复错误或步数上限使用 --resume 继续。"
+      ]
+    }
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "case": "missing_deadline",
+  "repeat": 3,
+  "model_mode": "mock",
+  "model": "deterministic-mock",
+  "elapsed_seconds": 0.4423,
+  "exit_code": 2,
+  "expected": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "invalid_input"
+  },
+  "expectation_matched": true,
+  "assessment": {
+    "checks": {
+      "ledger_total": true,
+      "nonnegative_charges": true,
+      "budget_respected": true,
+      "trace_sequence": true,
+      "completion_has_saved_plan": true,
+      "incomplete_has_reason": true,
+      "plan_is_dag": true,
+      "attempt_costs_match_ledger": true,
+      "failed_attempts_not_charged": true,
+      "attempt_ids_unique": true,
+      "step_result_references_valid": true
+    },
+    "all_checks_passed": true
+  },
+  "result": {
+    "campaign_id": "missing_deadline",
+    "status": "incomplete",
+    "reason": {
+      "code": "invalid_input",
+      "message": "deadline 需要带时区的 ISO 8601 截止时间",
+      "missing_fields": [
+        "deadline"
+      ]
+    },
+    "invocation": "input_validation",
+    "new_steps": 0,
+    "revision": 0,
+    "timeline": "2030-05-01T01:00:00+00:00",
+    "steps": {
+      "search_assets": "pending",
+      "estimate_cost": "pending",
+      "generate_script": "pending",
+      "save_plan": "pending"
+    },
+    "assets": [],
+    "asset_failures": [],
+    "quotes": {},
+    "script": null,
+    "charges": [],
+    "total_cost": 0,
+    "saved_plan": null,
+    "trace": [],
+    "task_id": "missing_deadline",
+    "run_id": "352a886787494e59808a4eb4e6337bce",
+    "task_plan": {
+      "version": 1,
+      "kind": "initial",
+      "variant": null,
+      "status": "incomplete",
+      "created_after_step": 0,
+      "trigger": {
+        "code": "task_received"
+      },
+      "steps": [
+        {
+          "step_id": "p1.search_assets",
+          "tool": "search_assets",
+          "inputs": {
+            "topic": "校园迎新社团体验日"
+          },
+          "depends_on": [],
+          "input_refs": [],
+          "expected_output": "search_assets_result",
+          "estimated_cost": 1,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "63c95f205613f140433d06c07513017b761f1dc6d7701fae4c717fd560a9ad71",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "input_validation"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.estimate_cost",
+          "tool": "estimate_cost",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets"
+          ],
+          "input_refs": [
+            "p1.search_assets.output"
+          ],
+          "expected_output": "estimate_cost_result",
+          "estimated_cost": 0,
+          "estimated_duration": 0,
+          "critical": true,
+          "idempotency_key": "c09d7dbc3eb6b77bfbbd97965cf31f672609a5403dcbb2652f3a84a6709af6f0",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "input_validation"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.generate_script",
+          "tool": "generate_script",
+          "inputs": {
+            "variant": null
+          },
+          "depends_on": [
+            "p1.search_assets",
+            "p1.estimate_cost"
+          ],
+          "input_refs": [
+            "p1.search_assets.output",
+            "p1.estimate_cost.output"
+          ],
+          "expected_output": "generate_script_result",
+          "estimated_cost": null,
+          "estimated_duration": null,
+          "critical": true,
+          "idempotency_key": "92f4fbc5bef10c59ba2fb5b2b03e894fda2c20e2f5d2ff4aa8bcb85687f515ad",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "input_validation"
+          ],
+          "reused": false
+        },
+        {
+          "step_id": "p1.save_plan",
+          "tool": "save_plan",
+          "inputs": {},
+          "depends_on": [
+            "p1.estimate_cost",
+            "p1.generate_script"
+          ],
+          "input_refs": [
+            "p1.estimate_cost.output",
+            "p1.generate_script.output"
+          ],
+          "expected_output": "save_plan_result",
+          "estimated_cost": 2,
+          "estimated_duration": 3,
+          "critical": true,
+          "idempotency_key": "1573f7dab9e2661bf6b3f1e41d23bc6ddbe91138f10a50af4dccd70b930e2930",
+          "attempt_refs": [],
+          "actual_cost": 0,
+          "actual_duration": 0,
+          "result": null,
+          "status": "blocked",
+          "blocked_by": [
+            "input_validation"
+          ],
+          "reused": false
+        }
+      ],
+      "actual_cost": 0,
+      "estimated_total_cost": null,
+      "estimated_finish": null
+    },
+    "plan_versions": [
+      {
+        "version": 1,
+        "kind": "initial",
+        "variant": null,
+        "status": "incomplete",
+        "created_after_step": 0,
+        "trigger": {
+          "code": "task_received"
+        },
+        "steps": [
+          {
+            "step_id": "p1.search_assets",
+            "tool": "search_assets",
+            "inputs": {
+              "topic": "校园迎新社团体验日"
+            },
+            "depends_on": [],
+            "input_refs": [],
+            "expected_output": "search_assets_result",
+            "estimated_cost": 1,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "63c95f205613f140433d06c07513017b761f1dc6d7701fae4c717fd560a9ad71",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "input_validation"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.estimate_cost",
+            "tool": "estimate_cost",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets"
+            ],
+            "input_refs": [
+              "p1.search_assets.output"
+            ],
+            "expected_output": "estimate_cost_result",
+            "estimated_cost": 0,
+            "estimated_duration": 0,
+            "critical": true,
+            "idempotency_key": "c09d7dbc3eb6b77bfbbd97965cf31f672609a5403dcbb2652f3a84a6709af6f0",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "input_validation"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.generate_script",
+            "tool": "generate_script",
+            "inputs": {
+              "variant": null
+            },
+            "depends_on": [
+              "p1.search_assets",
+              "p1.estimate_cost"
+            ],
+            "input_refs": [
+              "p1.search_assets.output",
+              "p1.estimate_cost.output"
+            ],
+            "expected_output": "generate_script_result",
+            "estimated_cost": null,
+            "estimated_duration": null,
+            "critical": true,
+            "idempotency_key": "92f4fbc5bef10c59ba2fb5b2b03e894fda2c20e2f5d2ff4aa8bcb85687f515ad",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "input_validation"
+            ],
+            "reused": false
+          },
+          {
+            "step_id": "p1.save_plan",
+            "tool": "save_plan",
+            "inputs": {},
+            "depends_on": [
+              "p1.estimate_cost",
+              "p1.generate_script"
+            ],
+            "input_refs": [
+              "p1.estimate_cost.output",
+              "p1.generate_script.output"
+            ],
+            "expected_output": "save_plan_result",
+            "estimated_cost": 2,
+            "estimated_duration": 3,
+            "critical": true,
+            "idempotency_key": "1573f7dab9e2661bf6b3f1e41d23bc6ddbe91138f10a50af4dccd70b930e2930",
+            "attempt_refs": [],
+            "actual_cost": 0,
+            "actual_duration": 0,
+            "result": null,
+            "status": "blocked",
+            "blocked_by": [
+              "input_validation"
+            ],
+            "reused": false
+          }
+        ],
+        "actual_cost": 0,
+        "estimated_total_cost": null,
+        "estimated_finish": null
+      }
+    ],
+    "replanning": [],
+    "attempts": [],
+    "snapshots": [],
+    "unfinished": {
+      "stopped_at": "search_assets",
+      "budget_gap": 0,
+      "late_minutes": 0,
+      "missing_fields": [
+        "deadline"
+      ],
+      "missing_assets": [],
+      "retained_steps": [],
+      "next_steps": [
+        "补齐字段：deadline，然后重新执行。"
+      ]
+    }
+  }
+}

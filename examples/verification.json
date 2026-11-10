@@ -1,0 +1,202 @@
+{
+  "started_at": "2026-11-10T21:27:00+08:00",
+  "verified_at": "2026-11-10T22:27:24.939643+08:00",
+  "python": "3.13.12",
+  "platform": "Windows",
+  "unit_tests_passed": 54,
+  "scenario_records": [
+    {
+      "file": "audited_live_budget.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 6,
+      "structured_audit": true
+    },
+    {
+      "file": "audited_live_error.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 6,
+      "structured_audit": true
+    },
+    {
+      "file": "dependency_blocked.json",
+      "status": "incomplete",
+      "cost": 0,
+      "steps": 1,
+      "structured_audit": true
+    },
+    {
+      "file": "failure.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 6,
+      "structured_audit": true
+    },
+    {
+      "file": "interrupted.json",
+      "status": "incomplete",
+      "cost": 10,
+      "steps": 4,
+      "structured_audit": true
+    },
+    {
+      "file": "live_budget.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 5,
+      "structured_audit": false
+    },
+    {
+      "file": "live_failure.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 6,
+      "structured_audit": false
+    },
+    {
+      "file": "live_stop.json",
+      "status": "incomplete",
+      "cost": 1,
+      "steps": 3,
+      "structured_audit": false
+    },
+    {
+      "file": "missing_budget.json",
+      "status": "incomplete",
+      "cost": 0,
+      "steps": 0,
+      "structured_audit": true
+    },
+    {
+      "file": "missing_deadline.json",
+      "status": "incomplete",
+      "cost": 0,
+      "steps": 0,
+      "structured_audit": true
+    },
+    {
+      "file": "no_assets.json",
+      "status": "incomplete",
+      "cost": 0,
+      "steps": 2,
+      "structured_audit": true
+    },
+    {
+      "file": "no_budget.json",
+      "status": "incomplete",
+      "cost": 1,
+      "steps": 4,
+      "structured_audit": true
+    },
+    {
+      "file": "normal.json",
+      "status": "completed",
+      "cost": 12,
+      "steps": 4,
+      "structured_audit": true
+    },
+    {
+      "file": "partial_assets.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 4,
+      "structured_audit": true
+    },
+    {
+      "file": "partial_resumed.json",
+      "status": "completed",
+      "cost": 12,
+      "steps": 5,
+      "structured_audit": true
+    },
+    {
+      "file": "partial_retained.json",
+      "status": "incomplete",
+      "cost": 1,
+      "steps": 1,
+      "structured_audit": true
+    },
+    {
+      "file": "partial_retry.json",
+      "status": "completed",
+      "cost": 12,
+      "steps": 5,
+      "structured_audit": true
+    },
+    {
+      "file": "repeat.json",
+      "status": "completed",
+      "cost": 12,
+      "steps": 4,
+      "structured_audit": true
+    },
+    {
+      "file": "replan.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 5,
+      "structured_audit": true
+    },
+    {
+      "file": "resumed.json",
+      "status": "completed",
+      "cost": 12,
+      "steps": 5,
+      "structured_audit": true
+    },
+    {
+      "file": "retry_completed.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 6,
+      "structured_audit": true
+    },
+    {
+      "file": "retry_interrupted.json",
+      "status": "incomplete",
+      "cost": 1,
+      "steps": 4,
+      "structured_audit": true
+    },
+    {
+      "file": "short_time.json",
+      "status": "completed",
+      "cost": 8,
+      "steps": 5,
+      "structured_audit": true
+    }
+  ],
+  "api_live_verified": false,
+  "bridge_controller": "Codex (self-reported)",
+  "clock_in_scenarios": "2030-05-01T09:00:00+08:00",
+  "scope": "Local CLI project; no remote publishing",
+  "local_commit": null,
+  "local_commit_blocker": "Git index.lock write denied by filesystem permissions; source files are available.",
+  "unit_tests_discovered": 57,
+  "unit_tests_skipped": 3,
+  "network_test_blocker": "Loopback TCP connections denied with WinError 10013",
+  "cli_process_integration_verified": true,
+  "concurrent_cli_processes_verified": 4,
+  "batch_evaluation": {
+    "mode": "mock",
+    "model": "deterministic-mock",
+    "repeats": 3,
+    "cases": 54,
+    "expectation_matches": 54,
+    "expectation_match_rate": 1.0,
+    "structural_checks_passed": 54,
+    "completion_count": 30,
+    "completion_rate": 0.5555555555555556,
+    "mean_elapsed_seconds": 0.49848148148148147,
+    "human_review_status": "pending",
+    "api_token_usage": "not_collected",
+    "note": "完成率包含预期未完成的负例；预期匹配率评估验收行为。mock 重复运行只验证流程稳定性。"
+  },
+  "checked_at": "2026-11-10T22:37:02.170542+08:00",
+  "requirements_audit": "docs/06-requirements-audit.md",
+  "structured_model_paths": [
+    "audited_live_budget.json",
+    "audited_live_error.json"
+  ]
+}

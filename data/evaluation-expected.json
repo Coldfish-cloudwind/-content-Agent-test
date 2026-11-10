@@ -1,0 +1,159 @@
+{
+  "retry_interrupted": {
+    "status": "incomplete",
+    "cost": 1,
+    "reason_code": "model_stopped",
+    "observations": [
+      {
+        "code": "injected_unavailable",
+        "ok": false
+      }
+    ]
+  },
+  "retry_completed": {
+    "status": "completed",
+    "cost": 8,
+    "variant": "lite",
+    "new_steps": 2
+  },
+  "normal": {
+    "status": "completed",
+    "cost": 12,
+    "variant": "studio"
+  },
+  "repeat": {
+    "status": "completed",
+    "cost": 12,
+    "variant": "studio",
+    "invocation": "cached",
+    "new_steps": 0
+  },
+  "replan": {
+    "status": "completed",
+    "cost": 8,
+    "variant": "lite",
+    "observations": [
+      {
+        "code": "quote",
+        "variant": "studio",
+        "budget_gap": 2
+      }
+    ]
+  },
+  "failure": {
+    "status": "completed",
+    "cost": 8,
+    "variant": "lite",
+    "observations": [
+      {
+        "code": "injected_unavailable",
+        "ok": false
+      }
+    ]
+  },
+  "missing_budget": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "invalid_input"
+  },
+  "missing_deadline": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "invalid_input"
+  },
+  "no_budget": {
+    "status": "incomplete",
+    "cost": 1,
+    "reason_code": "model_stopped",
+    "observations": [
+      {
+        "code": "quote",
+        "variant": "lite",
+        "budget_gap": 2
+      }
+    ]
+  },
+  "short_time": {
+    "status": "completed",
+    "cost": 8,
+    "variant": "lite",
+    "observations": [
+      {
+        "code": "quote",
+        "variant": "studio",
+        "late_minutes": 18
+      }
+    ]
+  },
+  "no_assets": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "model_stopped",
+    "observations": [
+      {
+        "code": "no_assets"
+      }
+    ]
+  },
+  "partial_assets": {
+    "status": "completed",
+    "cost": 8,
+    "variant": "lite"
+  },
+  "interrupted": {
+    "status": "incomplete",
+    "cost": 10,
+    "reason_code": "step_limit",
+    "observations": [
+      {
+        "code": "injected_unavailable",
+        "ok": false
+      }
+    ]
+  },
+  "resumed": {
+    "status": "completed",
+    "cost": 12,
+    "variant": "studio",
+    "new_steps": 1
+  },
+  "partial_retry": {
+    "status": "completed",
+    "cost": 12,
+    "variant": "studio",
+    "observations": [
+      {
+        "code": "assets_partial",
+        "status": "partial_success"
+      }
+    ]
+  },
+  "partial_retained": {
+    "status": "incomplete",
+    "cost": 1,
+    "reason_code": "step_limit",
+    "observations": [
+      {
+        "code": "assets_partial",
+        "status": "partial_success"
+      }
+    ]
+  },
+  "partial_resumed": {
+    "status": "completed",
+    "cost": 12,
+    "variant": "studio",
+    "new_steps": 4
+  },
+  "dependency_blocked": {
+    "status": "incomplete",
+    "cost": 0,
+    "reason_code": "step_limit",
+    "observations": [
+      {
+        "code": "injected_unavailable",
+        "status": "failed"
+      }
+    ]
+  }
+}
